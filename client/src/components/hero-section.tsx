@@ -15,16 +15,26 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative h-screen overflow-hidden">
-      {/* Background Video Placeholder */}
+      {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
-        <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat relative" 
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
-          }}
+        <video 
+          className="w-full h-full object-cover"
+          autoPlay 
+          muted 
+          loop 
+          playsInline
         >
-          <div className="absolute inset-0 bg-dark-blue/70"></div>
-        </div>
+          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/hero-video.webm" type="video/webm" />
+          {/* Fallback image if video doesn't load */}
+          <div 
+            className="w-full h-full bg-cover bg-center bg-no-repeat" 
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+            }}
+          ></div>
+        </video>
+        <div className="absolute inset-0 bg-dark-blue/50"></div>
       </div>
 
       {/* Hero Content */}
@@ -33,8 +43,7 @@ const HeroSection = () => {
           <div className="mb-8">
             <Bot className="text-8xl text-accent-orange mb-6 mx-auto h-32 w-32" />
             <h1 className="text-6xl md:text-8xl font-black text-light-text mb-4 tracking-tight">
-              HUNTER COMBAT<br />
-              <span className="text-accent-cyan">ROBOTICS</span>
+              HUNTER COMBAT ROBOTICS
             </h1>
             <p className="text-xl md:text-2xl text-light-text/90 font-light max-w-2xl mx-auto leading-relaxed">
               Where Engineering Meets Destruction

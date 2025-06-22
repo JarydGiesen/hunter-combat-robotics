@@ -17,24 +17,25 @@ const HeroSection = () => {
     <section id="home" className="relative h-screen overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
-        <video 
+        <video
           className="w-full h-full object-cover"
-          autoPlay 
-          muted 
-          loop 
+          autoPlay
+          muted
+          loop
           playsInline
         >
           <source src="/hero-video.mp4" type="video/mp4" />
           <source src="/hero-video.webm" type="video/webm" />
           {/* Fallback image if video doesn't load */}
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat" 
+          <div
+            className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
             }}
           ></div>
         </video>
-        <div className="absolute inset-0 bg-dark-blue/50"></div>
+        <div className="absolute inset-0 bg-black/80"></div>
       </div>
 
       {/* Hero Content */}
@@ -48,25 +49,6 @@ const HeroSection = () => {
             <p className="text-xl md:text-2xl text-light-text/90 font-light max-w-2xl mx-auto leading-relaxed">
               Where Engineering Meets Destruction
             </p>
-          </div>
-
-          <div className="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
-            <Link href="/getting-started">
-              <Button 
-                size="lg"
-                className="w-full sm:w-auto bg-accent-orange hover:bg-accent-orange/90 text-dark-blue font-bold py-4 px-8 transition-all duration-200 transform hover:scale-105"
-              >
-                GET STARTED
-              </Button>
-            </Link>
-            <Button 
-              variant="outline"
-              size="lg"
-              onClick={scrollToEvents}
-              className="w-full sm:w-auto border-2 border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-blue font-bold py-4 px-8 transition-all duration-200"
-            >
-              VIEW EVENTS
-            </Button>
           </div>
         </div>
       </div>

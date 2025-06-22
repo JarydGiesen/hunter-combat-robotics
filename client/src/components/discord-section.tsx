@@ -10,9 +10,9 @@ const DiscordSection = () => {
   ];
 
   return (
-    <section id="discord" className="py-20 bg-dark-blue">
+    <section id="discord" className="py-20 bg-[#F2F2F2]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-dark-gray border border-medium-gray p-8 lg:p-12 relative overflow-hidden">
+        <div className="bg-[#0D172B] border border-medium-gray p-8 lg:p-12 relative overflow-hidden">
           {/* Decorative Discord-style elements */}
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent-purple via-accent-cyan to-accent-orange"></div>
 
@@ -67,7 +67,7 @@ const DiscordSection = () => {
                 alt="Diverse group of engineers collaborating on robot designs" 
                 className="w-full h-auto rounded-lg shadow-2xl" 
               />
-              <div className="absolute -top-6 -right-6 bg-accent-purple text-light-text p-4 rounded">
+              <div className="absolute -top-6 -right-6 bg-accent-purple text-[#F2F2F2] p-4 rounded">
                 <MessageCircle className="h-8 w-8" />
               </div>
             </div>

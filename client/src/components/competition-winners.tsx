@@ -30,18 +30,18 @@ const CompetitionWinners = () => {
   ];
 
   return (
-    <section className="py-20 bg-dark-blue">
+    <section className="py-20 bg-[#F2F2F2]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-black text-[#0D172B] mb-4">
             HALL OF <span className="text-accent-cyan">CHAMPIONS</span>
           </h2>
-          <p className="text-xl text-light-text/80">Celebrating our latest tournament winners</p>
+          <p className="text-xl text-[#0D172B]/80">Celebrating our latest tournament winners</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {winners.map((winner, index) => (
-            <div key={index} className={`group relative overflow-hidden bg-dark-gray border border-medium-gray hover:border-${winner.borderColor} transition-colors duration-200`}>
+            <div key={index} className={`group relative overflow-hidden bg-[#0D172B] border border-medium-gray hover:border-${winner.borderColor} transition-colors duration-200`}>
               <img 
                 src={winner.image} 
                 alt={`${winner.robotName} championship victory`} 

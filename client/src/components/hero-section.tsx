@@ -35,7 +35,7 @@ const HeroSection = () => {
             }}
           ></div>
         </video>
-        <div className="absolute inset-0 bg-dark-blue/70"></div>
+        <div className="absolute inset-0 bg-black/80"></div>
       </div>
 
       {/* Hero Content */}
@@ -46,25 +46,9 @@ const HeroSection = () => {
             <h1 className="text-6xl md:text-8xl font-black text-light-text mb-4 tracking-tight">
               HUNTER COMBAT ROBOTICS
             </h1>
-          </div>
-
-          <div className="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
-            <Link href="/getting-started">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto bg-accent-orange hover:bg-accent-orange/90 text-dark-blue font-bold py-4 px-8 transition-all duration-200 transform hover:scale-105"
-              >
-                GET STARTED
-              </Button>
-            </Link>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={scrollToEvents}
-              className="w-full sm:w-auto border-2 border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-blue font-bold py-4 px-8 transition-all duration-200"
-            >
-              VIEW EVENTS
-            </Button>
+            <p className="text-xl md:text-2xl text-light-text/90 font-light max-w-2xl mx-auto leading-relaxed">
+              Where Engineering Meets Destruction
+            </p>
           </div>
         </div>
       </div>

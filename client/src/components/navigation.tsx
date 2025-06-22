@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -7,6 +7,7 @@ import { Menu, Bot } from "lucide-react";
 const Navigation = () => {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [isOnLightSection, setIsOnLightSection] = useState(false);
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -18,8 +19,41 @@ const Navigation = () => {
 
   const closeSheet = () => setIsOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get all sections with light backgrounds
+      const lightSections = document.querySelectorAll('[class*="bg-[#F2F2F2]"]');
+      const navHeight = 64; // Height of the navigation bar
+      const scrollY = window.scrollY;
+      
+      let onLightSection = false;
+      
+      lightSections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const sectionTop = rect.top + scrollY;
+        const sectionBottom = sectionTop + rect.height;
+        
+        // Check if navigation bar overlaps with this light section
+        if (scrollY + navHeight > sectionTop && scrollY < sectionBottom) {
+          onLightSection = true;
+        }
+      });
+      
+      setIsOnLightSection(onLightSection);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed w-full top-0 z-50 bg-dark-blue/95 backdrop-blur-sm border-b border-medium-gray">
+    <nav className={`fixed w-full top-0 z-50 border-b border-medium-gray transition-all duration-300 ${
+      isOnLightSection 
+        ? 'bg-[#0D172B] backdrop-blur-none' 
+        : 'bg-[#0D172B]/95 backdrop-blur-sm'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">

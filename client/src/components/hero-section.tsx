@@ -35,7 +35,7 @@ const HeroSection = () => {
             }}
           ></div>
         </video>
-        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Hero Content */}

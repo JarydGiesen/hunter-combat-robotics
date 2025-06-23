@@ -9,6 +9,7 @@ import Rules from "@/pages/rules";
 import FAQ from "@/pages/faq";
 import GettingStarted from "@/pages/getting-started";
 import Discord from "@/pages/discord";
+import NextEvent from "@/pages/next-event";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
@@ -18,9 +19,10 @@ function Router() {
       <Navigation />
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/getting-started" component={GettingStarted} />
+        <Route path="/next-event" component={NextEvent} />
         <Route path="/rules" component={Rules} />
         <Route path="/faq" component={FAQ} />
-        <Route path="/getting-started" component={GettingStarted} />
         <Route path="/discord" component={Discord} />
         <Route component={NotFound} />
       </Switch>

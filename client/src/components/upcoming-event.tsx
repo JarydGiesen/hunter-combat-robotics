@@ -34,22 +34,17 @@ const UpcomingEvent = () => {
                 Single elimination bracket with live streaming and expert commentary.
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div className="text-center">
-                  <div className="text-2xl font-black text-accent-cyan">NYC</div>
-                  <div className="text-sm text-[#0D172B]/70 uppercase">Location</div>
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="text-center p-4 border border-accent-cyan/30">
+                  <div className="text-2xl font-black text-accent-cyan">Lake Macquarie FabLab</div>
+                  <div className="text-sm text-light-text/70 uppercase tracking-wide">Location</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-accent-orange">64</div>
-                  <div className="text-sm text-[#0D172B]/70 uppercase">Robots</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-accent-purple">4</div>
-                  <div className="text-sm text-[#0D172B]/70 uppercase">Classes</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-accent-cyan">$5K</div>
-                  <div className="text-sm text-[#0D172B]/70 uppercase">Prize Pool</div>
+                <div className="text-center p-4 border border-accent-purple/30">
+                  <div className="space-y-1">
+                    <div className="text-lg font-black text-accent-cyan">150g Antweight (Open)</div>
+                    <div className="text-lg font-black text-accent-purple">150g Antweight (Plastic)</div>
+                  </div>
+                  <div className="text-sm text-light-text/70 uppercase tracking-wide mt-2">Classes</div>
                 </div>
               </div>
 

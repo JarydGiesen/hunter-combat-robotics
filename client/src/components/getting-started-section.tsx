@@ -20,17 +20,10 @@ const GettingStartedSection = () => {
     },
     {
       number: "03",
-      icon: Shield,
-      title: "Safety Check",
-      description: "Complete safety inspection with certified officials. Ensure your robot meets all competition requirements.",
-      color: "accent-orange"
-    },
-    {
-      number: "04",
       icon: Trophy,
-      title: "Enter Combat",
+      title: "Compete",
       description: "Register for events and face off against other builders. Learn, iterate, and become a combat robotics champion.",
-      color: "accent-purple"
+      color: "accent-orange"
     }
   ];
 
@@ -46,13 +39,13 @@ const GettingStartedSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
               <div key={index} className="relative group">
                 <div className={`bg-dark-blue border border-${step.color}/30 p-6 h-full hover:border-${step.color} transition-colors duration-200`}>
-                  <div className={`absolute -top-4 -left-4 w-8 h-8 bg-${step.color} text-dark-blue flex items-center justify-center font-black text-sm`}>
+                  <div className={`absolute -top-4 -left-4 w-8 h-8 bg-${step.color} text-[#0D172B] flex items-center justify-center font-black text-sm`}>
                     {step.number}
                   </div>
                   <Icon className={`h-12 w-12 text-${step.color} mb-4`} />

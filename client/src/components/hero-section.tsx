@@ -42,13 +42,20 @@ const HeroSection = () => {
       <div className="relative z-10 flex items-center justify-center h-full">
         <div className="text-center px-4 max-w-4xl mx-auto">
           <div className="mb-8">
-            <Bot className="text-8xl text-accent-orange mb-6 mx-auto h-32 w-32" />
+            <img 
+              src="/logo-transparent-large.png" 
+              alt="Hunter Combat Robotics Logo" 
+              className="h-32 w-auto mx-auto mb-6"
+              onError={(e) => {
+                // Fallback to robot icon if logo doesn't load
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.nextElementSibling.style.display = 'block';
+              }}
+            />
+            <Bot className="hidden text-8xl text-accent-orange mb-6 mx-auto h-32 w-32" />
             <h1 className="text-6xl md:text-8xl font-black text-light-text mb-4 tracking-tight">
               HUNTER COMBAT ROBOTICS
             </h1>
-            <p className="text-xl md:text-2xl text-light-text/90 font-light max-w-2xl mx-auto leading-relaxed">
-              Where Engineering Meets Destruction
-            </p>
           </div>
         </div>
       </div>

@@ -61,7 +61,7 @@ const AboutSection = () => {
               <Link href="/getting-started">
                 <Button
                   size="lg"
-                  className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold py-4 px-8 transition-all duration-200"
+                  className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold py-6 px-12 text-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   GET STARTED TODAY
                 </Button>
@@ -75,8 +75,18 @@ const AboutSection = () => {
               alt="Combat robot mechanical components"
               className="w-full h-auto rounded-lg shadow-2xl"
             />
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 border-4 border-accent-orange bg-dark-blue flex items-center justify-center">
-              <Cog className="h-12 w-12 text-accent-orange" />
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 border-4 border-accent-orange bg-[#0D172B] flex items-center justify-center">
+              <img 
+                src="/logo-blue-small.jpg" 
+                alt="HCR Logo" 
+                className="h-12 w-auto"
+                onError={(e) => {
+                  // Fallback to gear icon if logo doesn't load
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling.style.display = 'block';
+                }}
+              />
+              <Cog className="hidden h-12 w-12 text-accent-orange" />
             </div>
           </div>
         </div>

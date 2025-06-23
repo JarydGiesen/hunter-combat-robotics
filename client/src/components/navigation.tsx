@@ -10,11 +10,12 @@ const Navigation = () => {
   const [isOnLightSection, setIsOnLightSection] = useState(false);
 
   const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/rules", label: "Rules" },
-    { path: "/getting-started", label: "Get Started" },
-    { path: "/faq", label: "FAQ" },
-    { path: "/discord", label: "Discord" },
+    { path: "/", label: "Home", color: "text-accent-cyan" },
+    { path: "/getting-started", label: "Get Started", color: "text-accent-orange" },
+    { path: "/next-event", label: "Next Event", color: "text-accent-purple" },
+    { path: "/rules", label: "Rules", color: "text-accent-cyan" },
+    { path: "/faq", label: "FAQ", color: "text-accent-orange" },
+    { path: "/discord", label: "Discord", color: "text-accent-purple" },
   ];
 
   const closeSheet = () => setIsOpen(false);
@@ -49,18 +50,26 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full top-0 z-50 border-b border-medium-gray transition-all duration-300 ${
-      isOnLightSection 
-        ? 'bg-[#0D172B] backdrop-blur-none' 
-        : 'bg-[#0D172B]/95 backdrop-blur-sm'
-    }`}>
+    <nav className="fixed w-full top-0 z-50 bg-[#0D172B] border-b border-medium-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
-            <Bot className="h-8 w-8 text-accent-orange mr-2" />
-            <span className="text-2xl font-bold text-accent-orange">
-              HCR League
-            </span>
+            <img 
+              src="/logo-blue-small.jpg" 
+              alt="HCR League Logo" 
+              className="h-10 w-auto"
+              onError={(e) => {
+                // Fallback to robot icon if logo doesn't load
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.nextElementSibling.style.display = 'flex';
+              }}
+            />
+            <div className="hidden items-center">
+              <Bot className="h-8 w-8 text-accent-orange mr-2" />
+              <span className="text-2xl font-bold text-accent-orange">
+                HCR League
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -70,8 +79,8 @@ const Navigation = () => {
                 <Link key={item.path} href={item.path}>
                   <Button
                     variant="ghost"
-                    className={`text-light-text hover:text-accent-cyan transition-colors duration-200 font-medium ${
-                      location === item.path ? "text-accent-cyan" : ""
+                    className={`text-light-text hover:${item.color} transition-colors duration-200 font-medium ${
+                      location === item.path ? item.color : ""
                     }`}
                   >
                     {item.label}
@@ -95,8 +104,8 @@ const Navigation = () => {
                     <Link key={item.path} href={item.path} onClick={closeSheet}>
                       <Button
                         variant="ghost"
-                        className={`w-full justify-start text-light-text hover:text-accent-cyan transition-colors duration-200 ${
-                          location === item.path ? "text-accent-cyan" : ""
+                        className={`w-full justify-start text-light-text hover:${item.color} transition-colors duration-200 ${
+                          location === item.path ? item.color : ""
                         }`}
                       >
                         {item.label}

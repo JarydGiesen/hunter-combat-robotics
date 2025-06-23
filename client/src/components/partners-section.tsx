@@ -4,9 +4,9 @@ import { Factory, Cpu, Hammer, Video } from "lucide-react";
 const PartnersSection = () => {
   const partners = [
     {
-      name: "TechForge Industries",
-      contribution: "Materials Sponsor",
-      icon: Factory,
+      name: "Lake Macquarie FabLab",
+      contribution: "Facility Partner",
+      icon: Hammer,
       color: "accent-orange"
     },
     {
@@ -16,16 +16,10 @@ const PartnersSection = () => {
       color: "accent-cyan"
     },
     {
-      name: "MakerSpace NYC",
-      contribution: "Facility Partner",
-      icon: Hammer,
-      color: "accent-purple"
-    },
-    {
       name: "StreamTech Media",
       contribution: "Broadcasting Partner",
       icon: Video,
-      color: "accent-orange"
+      color: "accent-purple"
     }
   ];
 
@@ -39,7 +33,7 @@ const PartnersSection = () => {
           <p className="text-xl text-light-text/80">Supporting the future of combat robotics</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {partners.map((partner, index) => {
             const Icon = partner.icon;
             return (
@@ -54,15 +48,7 @@ const PartnersSection = () => {
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-light-text/60 mb-6">Interested in partnering with us?</p>
-          <Button 
-            variant="outline" 
-            className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-blue font-bold"
-          >
-            BECOME A PARTNER
-          </Button>
-        </div>
+
       </div>
     </section>
   );

@@ -31,7 +31,7 @@ const HeroSection = () => {
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
+                "url('/bot-1.jpg')",
             }}
           ></div>
         </video>

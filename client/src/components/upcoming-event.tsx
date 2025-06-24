@@ -26,7 +26,7 @@ const UpcomingEvent = () => {
               </div>
 
               <h3 className="text-3xl md:text-4xl font-black text-[#0D172B] mb-4">
-                Newcastle Knockout 2025
+                Newy Knockout 2025
               </h3>
 
               <p className="text-lg text-[#0D172B]/80 mb-6">
@@ -34,7 +34,7 @@ const UpcomingEvent = () => {
                 qualifiers and a single-elimination bracket final.
               </p>
 
-              <div className="grid grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="text-center p-4 border border-accent-cyan/30">
                   <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">
                     Location:
@@ -58,6 +58,10 @@ const UpcomingEvent = () => {
                       150g Antweight (Plastic)
                     </div>
                   </div>
+                </div>
+                <div className="text-center p-4 border border-accent-orange/30">
+                  <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">Price:</div>
+                  <div className="text-lg font-semibold text-accent-orange">FREE</div>
                 </div>
               </div>
 

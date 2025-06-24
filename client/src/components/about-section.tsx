@@ -34,7 +34,7 @@ const AboutSection = () => {
               community of Australian builders.
             </p>
 
-            <div className="text-center mb-8">
+            <div className="text-center mb-6">
               <div className="text-4xl font-black leading-none">
                 <div><span className="text-accent-orange">All </span><span className="text-[#0D172B]">builders,</span></div>
                 <div><span className="text-accent-cyan">All </span><span className="text-[#0D172B]">backgrounds,</span></div>

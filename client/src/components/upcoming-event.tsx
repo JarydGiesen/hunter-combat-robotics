@@ -39,8 +39,11 @@ const UpcomingEvent = () => {
                   <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">
                     Location:
                   </div>
-                  <div className="font-semibold text-accent-cyan text-[24px]">
+                  <div className="font-semibold text-accent-cyan text-[16px]">
                     Lake Mac FabLab
+                  </div>
+                  <div className="font-semibold text-accent-purple text-[14px]">
+                    123 Hunter St, Newcastle NSW 2300
                   </div>
                 </div>
                 <div className="text-center p-4 border border-accent-purple/30">

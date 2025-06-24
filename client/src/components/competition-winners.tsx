@@ -1,32 +1,32 @@
 const CompetitionWinners = () => {
   const winners = [
     {
-      robotName: "DEVASTATOR MK-III",
-      builderName: "Team Chaos",
-      weightClass: "Heavyweight",
-      event: "Winter Clash 2024",
+      robotName: "Hex Witch",
+      builderName: "Team Hot Glue",
+      weightClass: "Antweight (Open)",
+      event: "Bluest Bot -  Robot Royale 4",
       description:
-        "Vertical spinner with titanium armor. Dominated the heavyweight division with devastating power.",
+        "4WD Hammersaw with a modular front-end. Harnesses the magical power of hot glue.",
       image: "/bot-1.jpg", // First bot image
       borderColor: "accent-orange",
     },
     {
-      robotName: "RAZOR EDGE",
-      builderName: "Sarah Chen",
-      weightClass: "Middleweight",
-      event: "Winter Clash 2024",
+      robotName: "Flip-Side",
+      builderName: "Team Plot Armour",
+      weightClass: "Antweight (Plastic)",
+      event: "3rd Place - Robot Royale 4",
       description:
-        "Horizontal spinner with exceptional speed and precision. Undefeated in middleweight competition.",
+        "Tank-tracked bot with a mega powerful off-centred flipper arm.",
       image: "/bot-2.jpg", // Second bot image
       borderColor: "accent-purple",
     },
     {
-      robotName: "WHIRLWIND",
-      builderName: "Mike Rodriguez",
-      weightClass: "Lightweight",
-      event: "Winter Clash 2024",
+      robotName: "Door Hinge",
+      builderName: "Team Building Bots",
+      weightClass: "Antweight (Plastic)",
+      event: "1st Place - Robot Royale 4",
       description:
-        "Compact vertical disk with incredible agility. Perfect weight distribution and devastating attacks.",
+        "2WD, low-profile, big flipper bot that looks like a door hinge :)",
       image: "/bot-3.jpg", // Third bot image
       borderColor: "accent-cyan",
     },

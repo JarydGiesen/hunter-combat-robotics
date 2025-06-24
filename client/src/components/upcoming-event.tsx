@@ -30,29 +30,32 @@ const UpcomingEvent = () => {
                 Newy Knockout 2025
               </h3>
 
-
               <p className="text-lg text-[#0D172B]/80 mb-6">
-                Our regular occuring club tournament featuring round-robin
+                Our regularly occurring club tournament featuring round-robin
                 qualifiers and a single-elimination bracket final.
               </p>
 
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-accent-cyan mr-3" />
+                  <MapPin className="h-10 w-10 text-accent-cyan mr-3" />
                   <div>
-                    <div className="text-lg font-bold text-[#0D172B]">Lake Macquarie FabLab</div>
+                    <div className="text-lg font-bold text-[#0D172B]">
+                      Lake Macquarie FabLab
+                    </div>
                     <div className="text-sm text-[#0D172B]/70">Location</div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Trophy className="h-6 w-6 text-accent-purple mr-3" />
+                  <Trophy className="h-14 w-14 text-accent-purple mr-3" />
                   <div>
-                    <div className="text-lg font-bold text-[#0D172B]">150g Antweight (Open & Plastic)</div>
+                    <div className="text-lg font-bold text-[#0D172B]">
+                      150g Antweight (Open & Plastic)
+                    </div>
                     <div className="text-sm text-[#0D172B]/70">Classes</div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <DollarSign className="h-6 w-6 text-accent-orange mr-3" />
+                  <DollarSign className="h-9 w-9 text-accent-orange mr-3" />
                   <div>
                     <div className="text-lg font-bold text-[#0D172B]">FREE</div>
                     <div className="text-sm text-[#0D172B]/70">Admission</div>
@@ -79,7 +82,8 @@ const UpcomingEvent = () => {
                 alt="Combat robot at Lake Macquarie FabLab event"
                 className="w-full h-64 object-cover rounded-lg shadow-xl"
                 onError={(e) => {
-                  e.currentTarget.src = "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400";
+                  e.currentTarget.src =
+                    "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400";
                 }}
               />
             </div>

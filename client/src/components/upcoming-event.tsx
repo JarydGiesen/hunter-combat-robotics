@@ -34,8 +34,8 @@ const UpcomingEvent = () => {
                 qualifiers and a single-elimination bracket final.
               </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="text-center p-4 border border-accent-cyan/30">
+              <div className="flex gap-4 mb-8">
+                <div className="flex-1 text-center p-4 border border-accent-cyan/30">
                   <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">
                     Location:
                   </div>
@@ -46,7 +46,7 @@ const UpcomingEvent = () => {
                     123 Hunter St, Newcastle NSW 2300
                   </div>
                 </div>
-                <div className="text-center p-4 border border-accent-purple/30">
+                <div className="flex-1 text-center p-4 border border-accent-purple/30">
                   <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">
                     Classes:
                   </div>
@@ -59,7 +59,7 @@ const UpcomingEvent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="text-center p-4 border border-accent-orange/30">
+                <div className="flex-none w-32 text-center p-4 border border-accent-orange/30">
                   <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">Admission:</div>
                   <div className="font-semibold text-accent-orange text-[28px]">FREE</div>
                 </div>
@@ -80,9 +80,12 @@ const UpcomingEvent = () => {
 
             <div className="lg:col-span-1">
               <img
-                src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
-                alt="Arena packed with spectators during robot competition"
+                src="/bot-2.jpg"
+                alt="Combat robot at Lake Macquarie FabLab event"
                 className="w-full h-64 object-cover rounded-lg shadow-xl"
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400";
+                }}
               />
             </div>
           </div>

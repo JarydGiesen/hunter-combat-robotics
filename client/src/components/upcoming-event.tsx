@@ -34,8 +34,8 @@ const UpcomingEvent = () => {
                 qualifiers and a single-elimination bracket final.
               </p>
 
-              <div className="flex gap-4 mb-8">
-                <div className="flex-1 text-center p-4 border border-accent-cyan/30">
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="text-center p-4 border border-accent-cyan/30">
                   <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">
                     Location:
                   </div>
@@ -46,7 +46,7 @@ const UpcomingEvent = () => {
                     123 Hunter St, Newcastle NSW 2300
                   </div>
                 </div>
-                <div className="flex-1 text-center p-4 border border-accent-purple/30">
+                <div className="text-center p-4 border border-accent-purple/30">
                   <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">
                     Classes:
                   </div>
@@ -58,10 +58,6 @@ const UpcomingEvent = () => {
                       150g Antweight (Plastic)
                     </div>
                   </div>
-                </div>
-                <div className="flex-none w-32 text-center p-4 border border-accent-orange/30">
-                  <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">Admission:</div>
-                  <div className="font-semibold text-accent-orange text-[28px]">FREE</div>
                 </div>
               </div>
 

@@ -68,7 +68,7 @@ const FAQSection = () => {
           <Link href="/faq">
             <Button 
               variant="outline" 
-              className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-blue font-bold"
+              className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               VIEW ALL QUESTIONS
             </Button>

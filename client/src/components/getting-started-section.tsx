@@ -11,6 +11,9 @@ const GettingStartedSection = () => {
       description:
         "Pick a class and learn the ruleset, then design or download a plan for your bot.",
       color: "accent-purple",
+      borderClass: "border-accent-purple/30 hover:border-accent-purple",
+      bgClass: "bg-accent-purple",
+      textClass: "text-accent-purple",
     },
     {
       number: "02",
@@ -19,6 +22,9 @@ const GettingStartedSection = () => {
       description:
         "Assemble your bot and test it. It's better to find issues in testing than in the arena.",
       color: "accent-cyan",
+      borderClass: "border-accent-cyan/30 hover:border-accent-cyan",
+      bgClass: "bg-accent-cyan",
+      textClass: "text-accent-cyan",
     },
     {
       number: "03",
@@ -27,6 +33,9 @@ const GettingStartedSection = () => {
       description:
         "Register for an event, and go head-to-head against other bots in the arena.",
       color: "accent-orange",
+      borderClass: "border-accent-orange/30 hover:border-accent-orange",
+      bgClass: "bg-accent-orange",
+      textClass: "text-accent-orange",
     },
   ];
 
@@ -42,21 +51,20 @@ const GettingStartedSection = () => {
             easier than you would think.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
               <div key={index} className="relative group">
                 <div
-                  className={`bg-[#0D172B] border border-${step.color}/30 p-6 h-full hover:border-${step.color} transition-colors duration-200`}
+                  className={`bg-[#0D172B] border ${step.borderClass} p-6 h-full transition-colors duration-200`}
                 >
                   <div
-                    className={`absolute -top-4 -left-4 w-8 h-8 bg-${step.color} text-[#0D172B] flex items-center justify-center font-black text-sm`}
+                    className={`absolute -top-4 -left-4 w-8 h-8 ${step.bgClass} text-[#0D172B] flex items-center justify-center font-black text-sm`}
                   >
                     {step.number}
                   </div>
-                  <Icon className={`h-12 w-12 text-${step.color} mb-4`} />
+                  <Icon className={`h-12 w-12 ${step.textClass} mb-4`} />
                   <h3 className="text-xl font-bold text-light-text mb-3">
                     {step.title}
                   </h3>
@@ -68,10 +76,9 @@ const GettingStartedSection = () => {
             );
           })}
         </div>
-
         <div className="text-center mt-12">
           <Link href="/getting-started">
-            <Button className="bg-accent-orange hover:bg-accent-orange/90 text-dark-blue font-bold py-4 px-8">
+            <Button className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold py-4 px-8 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
               Learn More About Getting Started
             </Button>
           </Link>

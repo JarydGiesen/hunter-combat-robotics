@@ -61,12 +61,12 @@ const UpcomingEvent = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold">
+                <Button className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                   REGISTER NOW
                 </Button>
                 <Button
                   variant="outline"
-                  className="border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-[#F2F2F2] font-bold"
+                  className="border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-[#F2F2F2] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   VIEW DETAILS
                 </Button>

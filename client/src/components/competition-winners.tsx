@@ -7,8 +7,7 @@ const CompetitionWinners = () => {
       event: "Winter Clash 2024",
       description:
         "Vertical spinner with titanium armor. Dominated the heavyweight division with devastating power.",
-      image:
-        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/bot-1.jpg", // First bot image
       borderColor: "accent-orange",
     },
     {
@@ -18,8 +17,7 @@ const CompetitionWinners = () => {
       event: "Winter Clash 2024",
       description:
         "Horizontal spinner with exceptional speed and precision. Undefeated in middleweight competition.",
-      image:
-        "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/bot-2.jpg", // Second bot image
       borderColor: "accent-purple",
     },
     {
@@ -29,8 +27,7 @@ const CompetitionWinners = () => {
       event: "Winter Clash 2024",
       description:
         "Compact vertical disk with incredible agility. Perfect weight distribution and devastating attacks.",
-      image:
-        "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      image: "/bot-3.jpg", // Third bot image
       borderColor: "accent-cyan",
     },
   ];
@@ -46,7 +43,6 @@ const CompetitionWinners = () => {
             Meet some of our builder's bots.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {winners.map((winner, index) => (
             <div

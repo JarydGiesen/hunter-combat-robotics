@@ -46,7 +46,7 @@ const DiscordSection = () => {
                 })}
               </div>
 
-              <Button className="bg-accent-purple hover:bg-accent-purple/90 text-light-text font-bold py-4 px-8 flex items-center">
+              <Button className="bg-accent-purple hover:bg-accent-purple/90 text-light-text font-bold py-4 px-8 flex items-center transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                 <MessageCircle className="h-5 w-5 mr-3" />
                 JOIN DISCORD SERVER
               </Button>

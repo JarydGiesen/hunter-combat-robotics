@@ -45,11 +45,11 @@ const CompetitionWinners = () => {
               <img 
                 src={winner.image} 
                 alt={`${winner.robotName} championship victory`} 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" 
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" 
               />
               <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <span className={`bg-${winner.borderColor} text-dark-blue px-2 py-1 text-xs font-bold uppercase tracking-wide`}>
+                <div className="flex flex-col space-y-2 mb-3">
+                  <span className={`bg-${winner.borderColor} text-[#0D172B] px-3 py-1 text-sm font-bold uppercase tracking-wide self-start`}>
                     {winner.weightClass}
                   </span>
                   <span className="text-accent-cyan text-sm font-medium">

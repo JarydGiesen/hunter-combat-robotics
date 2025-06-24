@@ -1,4 +1,4 @@
-import { Cog } from "lucide-react";
+import { Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
@@ -9,63 +9,55 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-black text-[#0D172B] mb-6">
-              WHERE ENGINEERING
+              WHERE DESIGN
               <br />
               <span className="text-accent-purple">MEETS DESTRUCTION</span>
             </h2>
             <p className="text-lg text-[#0D172B]/80 mb-6 leading-relaxed">
-              Combat robotics is the ultimate test of engineering prowess,
-              creativity, and tactical thinking. Our league brings together
-              builders, engineers, and competitors to create fighting machines
-              that battle in controlled arenas.
+              Combat robotics is a fast-paced, hands-on sport where builders go
+              head-to-head in robot-versus-robot arena combat. Whether you are
+              looking for high-stakes competition, or just for a fun
+              community-orientated hobby, combat robotics offers something for
+              everyone in one of the most exciting emerging sports in the world.
             </p>
             <p className="text-lg text-[#0D172B]/80 mb-6 leading-relaxed">
-              From lightweight spinning discs to heavyweight crushers, every
-              robot tells a story of innovation, determination, and the
-              relentless pursuit of mechanical perfection.
+              Hunter Combat Robotics is a community of passionate builders that
+              welcomes all skill levels and provides the resources and support
+              needed to join this fast-growing sport. We regularly host events
+              and tournaments in the Newcastle-Hunter region where builders can
+              put their creations to the test.
             </p>
             <p className="text-lg text-[#0D172B]/80 mb-8 leading-relaxed font-semibold">
-              The best part? You don't need any prior experience to get started.
-              Our community welcomes complete beginners and provides all the
-              guidance you need to build your first robot.
+              The best part? You don't need any prior experience to get started!
+              It's now easier more than ever to build and fight your first bot -
+              thanks to highly accessible 3D printed weight classes and a strong
+              community of Australian builders.
             </p>
 
             <div className="grid grid-cols-3 gap-6 text-center">
               <div className="border border-accent-orange/30 p-4">
-                <div className="text-3xl font-black text-accent-orange mb-2">
-                  150+
-                </div>
-                <div className="text-sm text-[#0D172B]/70 uppercase tracking-wide">
-                  Robots Built
-                </div>
+                <div className="text-3xl font-black text-accent-orange mb-2">All</div>
+                <div className="text-sm text-[#0D172B]/70 uppercase tracking-wide">Builders</div>
               </div>
               <div className="border border-accent-cyan/30 p-4">
-                <div className="text-3xl font-black text-accent-cyan mb-2">
-                  500+
-                </div>
-                <div className="text-sm text-[#0D172B]/70 uppercase tracking-wide">
-                  Matches Fought
-                </div>
+                <div className="text-3xl font-black text-accent-cyan mb-2">All</div>
+                <div className="text-sm text-[#0D172B]/70 uppercase tracking-wide">Backgrounds</div>
               </div>
               <div className="border border-accent-purple/30 p-4">
-                <div className="text-3xl font-black text-accent-purple mb-2">
-                  75+
-                </div>
-                <div className="text-sm text-[#0D172B]/70 uppercase tracking-wide">
-                  Active Builders
-                </div>
+                <div className="text-3xl font-black text-accent-purple mb-2">All</div>
+                <div className="text-sm text-[#0D172B]/70 uppercase tracking-wide">Welcome</div>
               </div>
             </div>
 
             <div className="mt-8">
-              <Link href="/getting-started">
+              <a href="/getting-started">
                 <Button
                   size="lg"
                   className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold py-6 px-12 text-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   GET STARTED TODAY
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -76,17 +68,7 @@ const AboutSection = () => {
               className="w-full h-auto rounded-lg shadow-2xl"
             />
             <div className="absolute -bottom-6 -right-6 w-24 h-24 border-4 border-accent-orange bg-[#0D172B] flex items-center justify-center">
-              <img 
-                src="/logo-blue-small.jpg" 
-                alt="HCR Logo" 
-                className="h-12 w-auto"
-                onError={(e) => {
-                  // Fallback to gear icon if logo doesn't load
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling.style.display = 'block';
-                }}
-              />
-              <Cog className="hidden h-12 w-12 text-accent-orange" />
+              <Bot className="h-12 w-12 text-accent-orange" />
             </div>
           </div>
         </div>

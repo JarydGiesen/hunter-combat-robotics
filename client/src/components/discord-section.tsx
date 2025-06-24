@@ -31,16 +31,7 @@ const DiscordSection = () => {
                 the latest league news. Our Discord is the beating heart of the HCR community.
               </p>
 
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center p-4 border border-accent-purple/30">
-                  <div className="text-2xl font-black text-accent-purple mb-1">1,247</div>
-                  <div className="text-sm text-light-text/70 uppercase tracking-wide">Active Members</div>
-                </div>
-                <div className="text-center p-4 border border-accent-cyan/30">
-                  <div className="text-2xl font-black text-accent-cyan mb-1">25+</div>
-                  <div className="text-sm text-light-text/70 uppercase tracking-wide">Channels</div>
-                </div>
-              </div>
+
 
               <div className="space-y-3 mb-8">
                 {features.map((feature, index) => {

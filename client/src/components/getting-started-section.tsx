@@ -44,7 +44,7 @@ const GettingStartedSection = () => {
             const Icon = step.icon;
             return (
               <div key={index} className="relative group">
-                <div className={`bg-dark-blue border border-${step.color}/30 p-6 h-full hover:border-${step.color} transition-colors duration-200`}>
+                <div className={`bg-[#0D172B] border border-${step.color}/30 p-6 h-full hover:border-${step.color} transition-colors duration-200`}>
                   <div className={`absolute -top-4 -left-4 w-8 h-8 bg-${step.color} text-[#0D172B] flex items-center justify-center font-black text-sm`}>
                     {step.number}
                   </div>

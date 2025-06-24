@@ -22,7 +22,7 @@ const UpcomingEvent = () => {
                 <span className="bg-accent-orange text-[#0D172B] px-3 py-1 text-sm font-bold uppercase tracking-wide mr-4">
                   Next Event
                 </span>
-                <span className="text-accent-cyan font-medium">March 15, 2024</span>
+                <span className="text-accent-orange font-bold">March 15, 2024</span>
               </div>
 
               <h3 className="text-3xl md:text-4xl font-black text-[#0D172B] mb-4">
@@ -36,15 +36,15 @@ const UpcomingEvent = () => {
 
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center p-4 border border-accent-cyan/30">
-                  <div className="text-2xl font-black text-accent-cyan">Lake Macquarie FabLab</div>
-                  <div className="text-sm text-light-text/70 uppercase tracking-wide">Location</div>
+                  <div className="text-lg font-black text-accent-cyan mb-2">Location:</div>
+                  <div className="text-lg font-semibold text-light-text">Lake Macquarie FabLab</div>
                 </div>
                 <div className="text-center p-4 border border-accent-purple/30">
+                  <div className="text-lg font-black text-accent-purple mb-2">Classes:</div>
                   <div className="space-y-1">
-                    <div className="text-lg font-black text-accent-cyan">150g Antweight (Open)</div>
-                    <div className="text-lg font-black text-accent-purple">150g Antweight (Plastic)</div>
+                    <div className="text-sm font-semibold text-accent-cyan">150g Antweight (Open)</div>
+                    <div className="text-sm font-semibold text-accent-purple">150g Antweight (Plastic)</div>
                   </div>
-                  <div className="text-sm text-light-text/70 uppercase tracking-wide mt-2">Classes</div>
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ const UpcomingEvent = () => {
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-[#0D172B] font-bold"
+                  className="border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-[#F2F2F2] font-bold"
                 >
                   VIEW DETAILS
                 </Button>

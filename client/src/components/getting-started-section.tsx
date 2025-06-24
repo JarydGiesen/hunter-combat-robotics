@@ -45,7 +45,7 @@ const GettingStartedSection = () => {
             return (
               <div key={index} className="relative group">
                 <div className={`bg-[#0D172B] border border-${step.color}/30 p-6 h-full hover:border-${step.color} transition-colors duration-200`}>
-                  <div className="absolute -top-4 -left-4 w-8 h-8 text-[#0D172B] flex items-center justify-center font-black text-sm bg-[#00b3ff]">
+                  <div className={`absolute -top-4 -left-4 w-8 h-8 bg-${step.color} text-[#0D172B] flex items-center justify-center font-black text-sm`}>
                     {step.number}
                   </div>
                   <Icon className={`h-12 w-12 text-${step.color} mb-4`} />

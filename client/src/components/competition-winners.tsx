@@ -49,7 +49,11 @@ const CompetitionWinners = () => {
               />
               <div className="p-6">
                 <div className="flex flex-col space-y-2 mb-3">
-                  <span className={`bg-${winner.borderColor} text-[#0D172B] px-3 py-1 text-sm font-bold uppercase tracking-wide self-start`}>
+                  <span className={`px-3 py-1 text-sm font-bold uppercase tracking-wide self-start text-[#0D172B] ${
+                    winner.borderColor === 'accent-orange' ? 'bg-accent-orange' :
+                    winner.borderColor === 'accent-purple' ? 'bg-accent-purple' :
+                    'bg-accent-cyan'
+                  }`}>
                     {winner.weightClass}
                   </span>
                   <span className="text-accent-cyan text-sm font-medium">

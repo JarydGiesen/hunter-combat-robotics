@@ -34,18 +34,14 @@ const AboutSection = () => {
               community of Australian builders.
             </p>
 
-            <div className="grid grid-cols-3 gap-6 text-center">
-              <div className="border border-accent-orange/30 p-4">
-                <div className="text-3xl font-black text-accent-orange mb-2">All</div>
-                <div className="text-sm text-[#0D172B]/70 uppercase tracking-wide">Builders</div>
-              </div>
-              <div className="border border-accent-cyan/30 p-4">
-                <div className="text-3xl font-black text-accent-cyan mb-2">All</div>
-                <div className="text-sm text-[#0D172B]/70 uppercase tracking-wide">Backgrounds</div>
-              </div>
-              <div className="border border-accent-purple/30 p-4">
-                <div className="text-3xl font-black text-accent-purple mb-2">All</div>
-                <div className="text-sm text-[#0D172B]/70 uppercase tracking-wide">Welcome</div>
+            <div className="text-center mb-8">
+              <div className="text-4xl md:text-5xl font-black leading-tight">
+                <span className="text-accent-orange">All </span>
+                <span className="text-[#0D172B]">builders, </span>
+                <span className="text-accent-cyan">All </span>
+                <span className="text-[#0D172B]">backgrounds, </span>
+                <span className="text-accent-purple">All </span>
+                <span className="text-[#0D172B]">welcome.</span>
               </div>
             </div>
 

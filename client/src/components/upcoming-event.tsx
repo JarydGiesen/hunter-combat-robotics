@@ -61,7 +61,7 @@ const UpcomingEvent = () => {
                 </div>
                 <div className="text-center p-4 border border-accent-orange/30">
                   <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">Admission:</div>
-                  <div className="text-lg font-semibold text-accent-orange">FREE</div>
+                  <div className="font-semibold text-accent-orange text-[28px]">FREE</div>
                 </div>
               </div>
 

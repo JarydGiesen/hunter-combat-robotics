@@ -48,7 +48,7 @@ const UpcomingEvent = () => {
                   <Trophy className="h-6 w-6 text-accent-purple mr-3" />
                   <div>
                     <div className="text-lg font-bold text-[#0D172B]">150g Antweight (Open & Plastic)</div>
-                    <div className="text-sm text-[#0D172B]/70">Open & Plastic</div>
+                    <div className="text-sm text-[#0D172B]/70">Classes</div>
                   </div>
                 </div>
                 <div className="flex items-center">

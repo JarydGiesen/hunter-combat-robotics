@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { MapPin, Trophy, DollarSign } from "lucide-react";
 
 const UpcomingEvent = () => {
   return (
@@ -37,27 +38,21 @@ const UpcomingEvent = () => {
 
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center">
-                  <div className="h-6 w-6 bg-accent-cyan mr-3 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-[#F2F2F2] rounded-full"></div>
-                  </div>
+                  <MapPin className="h-6 w-6 text-accent-cyan mr-3" />
                   <div>
                     <div className="text-lg font-bold text-[#0D172B]">Lake Macquarie FabLab</div>
                     <div className="text-sm text-[#0D172B]/70">Location</div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="h-6 w-6 bg-accent-purple mr-3 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-[#F2F2F2] rounded-full"></div>
-                  </div>
+                  <Trophy className="h-6 w-6 text-accent-purple mr-3" />
                   <div>
                     <div className="text-lg font-bold text-[#0D172B]">150g Antweight Classes</div>
                     <div className="text-sm text-[#0D172B]/70">Open & Plastic</div>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="h-6 w-6 bg-accent-orange mr-3 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-[#F2F2F2] rounded-full"></div>
-                  </div>
+                  <DollarSign className="h-6 w-6 text-accent-orange mr-3" />
                   <div>
                     <div className="text-lg font-bold text-[#0D172B]">FREE</div>
                     <div className="text-sm text-[#0D172B]/70">Admission</div>

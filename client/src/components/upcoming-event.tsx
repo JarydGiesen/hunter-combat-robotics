@@ -22,7 +22,7 @@ const UpcomingEvent = () => {
                 <span className="bg-accent-orange text-[#0D172B] px-3 py-1 text-sm font-bold uppercase tracking-wide mr-4">
                   Next Event
                 </span>
-                <span className="text-accent-purple font-bold">TBA</span>
+                <span className="text-accent-purple font-bold">Date TBA</span>
               </div>
 
               <h3 className="text-3xl md:text-4xl font-black text-[#0D172B] mb-4">

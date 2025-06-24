@@ -38,7 +38,7 @@ const AboutSection = () => {
               <div className="text-4xl font-black leading-relaxed space-y-2">
                 <div><span className="text-accent-orange">All </span><span className="text-[#0D172B]">builders,</span></div>
                 <div className="mt-[0px] mb-[0px]"><span className="text-accent-cyan">All </span><span className="text-[#0D172B]">backgrounds,</span></div>
-                <div><span className="text-accent-purple">All </span><span className="text-[#0D172B]">welcome.</span></div>
+                <div className="mt-[0px] mb-[0px]"><span className="text-accent-purple">All </span><span className="text-[#0D172B]">welcome.</span></div>
               </div>
             </div>
 

@@ -39,7 +39,7 @@ const UpcomingEvent = () => {
                   <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">
                     Location:
                   </div>
-                  <div className="font-semibold text-accent-cyan text-[20px]">
+                  <div className="font-semibold text-accent-cyan text-[24px]">
                     Lake Mac FabLab
                   </div>
                 </div>

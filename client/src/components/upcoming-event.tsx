@@ -25,38 +25,42 @@ const UpcomingEvent = () => {
                 <span className="text-accent-purple font-bold">Date TBA</span>
               </div>
 
-              <h3 className="text-3xl md:text-4xl font-black text-[#0D172B] mb-4">
+              <h3 className="text-3xl md:text-4xl font-black text-[#0D172B] mb-2">
                 Newy Knockout 2025
               </h3>
+
 
               <p className="text-lg text-[#0D172B]/80 mb-6">
                 Our regular occuring club tournament featuring round-robin
                 qualifiers and a single-elimination bracket final.
               </p>
 
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center p-4 border border-accent-cyan/30">
-                  <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">
-                    Location:
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                <div className="flex items-center">
+                  <div className="h-6 w-6 bg-accent-cyan mr-3 flex items-center justify-center">
+                    <div className="w-3 h-3 bg-[#F2F2F2] rounded-full"></div>
                   </div>
-                  <div className="font-semibold text-accent-cyan text-[16px]">
-                    Lake Mac FabLab
-                  </div>
-                  <div className="font-semibold text-accent-purple text-[14px]">
-                    123 Hunter St, Newcastle NSW 2300
+                  <div>
+                    <div className="text-lg font-bold text-[#0D172B]">Lake Macquarie FabLab</div>
+                    <div className="text-sm text-[#0D172B]/70">Location</div>
                   </div>
                 </div>
-                <div className="text-center p-4 border border-accent-purple/30">
-                  <div className="text-sm font-black text-[#0D172B] mb-2 uppercase tracking-wide">
-                    Classes:
+                <div className="flex items-center">
+                  <div className="h-6 w-6 bg-accent-purple mr-3 flex items-center justify-center">
+                    <div className="w-3 h-3 bg-[#F2F2F2] rounded-full"></div>
                   </div>
-                  <div className="space-y-1">
-                    <div className="text-base font-semibold text-accent-cyan">
-                      150g Antweight (Open)
-                    </div>
-                    <div className="text-base font-semibold text-accent-purple">
-                      150g Antweight (Plastic)
-                    </div>
+                  <div>
+                    <div className="text-lg font-bold text-[#0D172B]">150g Antweight Classes</div>
+                    <div className="text-sm text-[#0D172B]/70">Open & Plastic</div>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="h-6 w-6 bg-accent-orange mr-3 flex items-center justify-center">
+                    <div className="w-3 h-3 bg-[#F2F2F2] rounded-full"></div>
+                  </div>
+                  <div>
+                    <div className="text-lg font-bold text-[#0D172B]">FREE</div>
+                    <div className="text-sm text-[#0D172B]/70">Admission</div>
                   </div>
                 </div>
               </div>

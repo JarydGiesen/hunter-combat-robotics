@@ -1,24 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { FileText, Download, BookOpen, AlertTriangle } from "lucide-react";
+import { FileText, Download, BookOpen } from "lucide-react";
 
 const RulesSection = () => {
-  const ruleHighlights = [
-    {
-      icon: AlertTriangle,
-      title: "Safety First",
-      description: "All robots must pass safety inspection before competition"
-    },
-    {
-      icon: BookOpen,
-      title: "Weight Limits",
-      description: "Strict 150g weight limit enforced at weigh-in"
-    },
-    {
-      icon: FileText,
-      title: "Material Rules",
-      description: "Different restrictions apply to Open vs Plastic categories"
-    }
-  ];
+
 
   return (
     <section id="rules" className="py-20 bg-[#0D172B]">
@@ -32,25 +16,7 @@ const RulesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {ruleHighlights.map((rule, index) => {
-            const Icon = rule.icon;
-            return (
-              <div
-                key={index}
-                className="bg-[#F2F2F2] border border-medium-gray p-6 text-center group hover:border-accent-cyan transition-colors duration-200"
-              >
-                <Icon className="h-12 w-12 text-accent-cyan mx-auto mb-4 group-hover:scale-110 transition-transform duration-200" />
-                <h3 className="text-lg font-bold text-[#0D172B] mb-3">
-                  {rule.title}
-                </h3>
-                <p className="text-[#0D172B]/70 text-sm">
-                  {rule.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Brief Rulebook */}

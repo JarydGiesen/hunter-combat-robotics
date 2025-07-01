@@ -12,7 +12,7 @@ const RulesSection = () => {
             COMPETITION <span className="text-accent-orange">RULES</span>
           </h2>
           <p className="text-xl text-light-text/80 max-w-3xl mx-auto">
-            Everything you need to know to compete safely and fairly
+            Your bot will be scrutineered on the day to ensure it meets all the rules.
           </p>
         </div>
 
@@ -26,18 +26,12 @@ const RulesSection = () => {
               <div className="flex items-center mb-4">
                 <BookOpen className="h-8 w-8 text-accent-orange mr-3" />
                 <h3 className="text-2xl font-black text-[#0D172B]">
-                  Brief Rulebook
+                  Brief Ruleset
                 </h3>
               </div>
               <p className="text-[#0D172B]/80 mb-6">
-                Quick visual guide with essential rules and reminders. Perfect for experienced builders who need a fast reference.
+                Quick visual guide with essential rules and reminders. Perfect for an introduction or refresher of the rules.
               </p>
-              <div className="space-y-2 mb-6 text-sm text-[#0D172B]/70">
-                <div>• Visual safety checklist</div>
-                <div>• Weight class specifications</div>
-                <div>• Competition format overview</div>
-                <div>• Quick material guidelines</div>
-              </div>
               <Button className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center">
                 <Download className="h-4 w-4 mr-2" />
                 Download Brief Rules
@@ -52,18 +46,12 @@ const RulesSection = () => {
               <div className="flex items-center mb-4">
                 <FileText className="h-8 w-8 text-accent-purple mr-3" />
                 <h3 className="text-2xl font-black text-[#0D172B]">
-                  Complete Ruleset
+                  Complete Rulebook
                 </h3>
               </div>
               <p className="text-[#0D172B]/80 mb-6">
-                Comprehensive 30-page document covering all rules, safety requirements, and competition procedures in detail.
+                Comprehensive document covering all rules and safety requirements in detail. This has the final say on all rules.
               </p>
-              <div className="space-y-2 mb-6 text-sm text-[#0D172B]/70">
-                <div>• Detailed safety regulations</div>
-                <div>• Complete material specifications</div>
-                <div>• Tournament bracket procedures</div>
-                <div>• Scoring and judging criteria</div>
-              </div>
               <Button 
                 variant="outline"
                 className="border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-[#F2F2F2] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center"

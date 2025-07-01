@@ -46,10 +46,7 @@ const GettingStartedSection = () => {
           <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
             BUILD YOUR <span className="text-accent-orange">BOT</span>
           </h2>
-          <p className="text-xl text-light-text/80 max-w-3xl mx-auto">
-            From concept to combat-ready. Getting your bot in the arena is
-            easier than you would think.
-          </p>
+          <p className="text-xl text-light-text/80 max-w-3xl mx-auto">From concept to combat-ready. Getting your bot in the arena is easier than you might think.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => {

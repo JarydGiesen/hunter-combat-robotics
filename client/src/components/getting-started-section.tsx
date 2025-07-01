@@ -74,11 +74,12 @@ const GettingStartedSection = () => {
           })}
         </div>
         <div className="text-center mt-12">
-          <Link href="/getting-started">
-            <Button className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold py-4 px-8 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
-              Learn More About Getting Started
-            </Button>
-          </Link>
+          <Button 
+            className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold py-4 px-8 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            onClick={() => document.getElementById('discord')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Join Our Community
+          </Button>
         </div>
       </div>
     </section>

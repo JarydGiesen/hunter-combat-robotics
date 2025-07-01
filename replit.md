@@ -83,6 +83,9 @@ The build process creates a single deployable package with the React frontend bu
 
 ```
 Changelog:
+- July 1, 2025. Converted to single-page website
+- July 1, 2025. Added competition classes and rules sections
+- July 1, 2025. Updated navigation to use smooth scrolling anchors
 - June 24, 2025. Initial setup
 ```
 

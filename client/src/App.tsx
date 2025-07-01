@@ -19,11 +19,6 @@ function Router() {
       <Navigation />
       <Switch>
         <Route path="/" component={Home} />
-        <Route path="/getting-started" component={GettingStarted} />
-        <Route path="/next-event" component={NextEvent} />
-        <Route path="/rules" component={Rules} />
-        <Route path="/faq" component={FAQ} />
-        <Route path="/discord" component={Discord} />
         <Route component={NotFound} />
       </Switch>
       <Footer />

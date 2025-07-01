@@ -41,9 +41,7 @@ const FAQSection = () => {
             FREQUENTLY ASKED{" "}
             <span className="text-accent-purple">QUESTIONS</span>
           </h2>
-          <p className="text-xl text-light-text/80">
-            Everything you need to know to get started
-          </p>
+          
         </div>
 
         <div className="space-y-4">

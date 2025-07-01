@@ -7,20 +7,20 @@ const PartnersSection = () => {
       name: "Lake Macquarie FabLab",
       contribution: "Facility Partner",
       icon: Hammer,
-      color: "accent-orange"
+      color: "accent-orange",
     },
     {
       name: "RoboTech Solutions",
       contribution: "Electronics Partner",
       icon: Cpu,
-      color: "accent-cyan"
+      color: "accent-cyan",
     },
     {
       name: "StreamTech Media",
       contribution: "Broadcasting Partner",
       icon: Video,
-      color: "accent-purple"
-    }
+      color: "accent-purple",
+    },
   ];
 
   return (
@@ -28,27 +28,33 @@ const PartnersSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
-            OUR <span className="text-accent-orange">PARTNERS</span>
+            WE'D LIKE TO <span className="text-accent-orange">THANK</span>
           </h2>
-          <p className="text-xl text-light-text/80">Supporting the future of combat robotics</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {partners.map((partner, index) => {
             const Icon = partner.icon;
             return (
-              <div key={index} className={`bg-dark-blue border border-medium-gray p-6 text-center hover:border-${partner.color} transition-colors duration-200 group`}>
-                <div className={`text-${partner.color} mb-3 group-hover:scale-110 transition-transform duration-200 flex justify-center`}>
+              <div
+                key={index}
+                className={`bg-dark-blue border border-medium-gray p-6 text-center hover:border-${partner.color} transition-colors duration-200 group`}
+              >
+                <div
+                  className={`text-${partner.color} mb-3 group-hover:scale-110 transition-transform duration-200 flex justify-center`}
+                >
                   <Icon className="h-12 w-12" />
                 </div>
-                <h3 className="text-lg font-bold text-light-text mb-2">{partner.name}</h3>
-                <p className="text-sm text-light-text/60">{partner.contribution}</p>
+                <h3 className="text-lg font-bold text-light-text mb-2">
+                  {partner.name}
+                </h3>
+                <p className="text-sm text-light-text/60">
+                  {partner.contribution}
+                </p>
               </div>
             );
           })}
         </div>
-
-
       </div>
     </section>
   );

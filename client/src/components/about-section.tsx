@@ -49,7 +49,7 @@ const AboutSection = () => {
             <img
               src="/action-shot.jpg"
               alt="Combat robot mechanical components"
-              className="w-full h-auto rounded-lg shadow-2xl"
+              className="w-full h-auto rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105"
             />
             <div className="absolute -bottom-6 -right-6 w-24 h-24 border-4 border-accent-orange bg-[#0D172B] flex items-center justify-center">
               <Bot className="h-12 w-12 text-accent-orange" />

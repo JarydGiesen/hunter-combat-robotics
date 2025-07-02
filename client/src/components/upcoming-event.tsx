@@ -80,7 +80,7 @@ const UpcomingEvent = () => {
               <img
                 src="/bot-2.jpg"
                 alt="Combat robot at Lake Macquarie FabLab event"
-                className="w-full h-64 object-cover rounded-lg shadow-xl"
+                className="w-full h-64 object-cover rounded-lg shadow-xl transition-transform duration-300 hover:scale-105"
                 onError={(e) => {
                   e.currentTarget.src =
                     "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400";

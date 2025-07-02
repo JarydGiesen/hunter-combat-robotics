@@ -42,15 +42,7 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="mt-8">
-              <Button
-                size="lg"
-                className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold py-6 px-12 text-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                onClick={() => document.getElementById('getting-started')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                GET STARTED TODAY
-              </Button>
-            </div>
+
           </div>
 
           <div className="relative">

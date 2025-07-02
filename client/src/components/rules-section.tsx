@@ -32,7 +32,10 @@ const RulesSection = () => {
               <p className="text-[#0D172B]/80 mb-6">
                 Quick visual guide with essential rules and reminders. Perfect for an introduction or refresher of the rules.
               </p>
-              <Button className="bg-accent-cyan hover:bg-accent-cyan/90 text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center">
+              <Button 
+                variant="outline"
+                className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-[#F2F2F2] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center"
+              >
                 <Download className="h-4 w-4 mr-2" />
                 Download Brief Rules
               </Button>

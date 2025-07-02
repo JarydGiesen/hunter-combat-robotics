@@ -46,7 +46,7 @@ const FAQSection = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-medium-gray bg-dark-blue">
+            <div key={index} className="border border-medium-gray bg-dark-blue overflow-hidden">
               <button
                 className="w-full text-left p-6 flex justify-between items-center hover:bg-dark-gray/50 transition-colors duration-200"
                 onClick={() => toggleFAQ(index)}
@@ -54,19 +54,23 @@ const FAQSection = () => {
                 <span className="text-lg font-semibold text-light-text">
                   {faq.question}
                 </span>
-                {openIndex === index ? (
-                  <ChevronUp className="h-5 w-5 text-accent-orange transition-transform duration-200" />
-                ) : (
-                  <ChevronDown className="h-5 w-5 text-accent-orange transition-transform duration-200" />
-                )}
+                <ChevronDown className={`h-5 w-5 text-accent-orange transition-transform duration-300 ${
+                  openIndex === index ? 'rotate-180' : ''
+                }`} />
               </button>
-              {openIndex === index && (
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  openIndex === index 
+                    ? 'max-h-96 opacity-100' 
+                    : 'max-h-0 opacity-0'
+                }`}
+              >
                 <div className="px-6 pb-6">
                   <p className="text-light-text/80 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

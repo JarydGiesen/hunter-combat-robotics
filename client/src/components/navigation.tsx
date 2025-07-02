@@ -10,12 +10,9 @@ const Navigation = () => {
   const [isOnLightSection, setIsOnLightSection] = useState(false);
 
   const navItems = [
-    { path: "/", label: "Home", color: "text-accent-cyan" },
-    { path: "/getting-started", label: "Get Started", color: "text-accent-orange" },
-    { path: "/next-event", label: "Next Event", color: "text-accent-purple" },
-    { path: "/rules", label: "Rules", color: "text-accent-cyan" },
-    { path: "/faq", label: "FAQ", color: "text-accent-orange" },
-    { path: "/discord", label: "Discord", color: "text-accent-purple" },
+    { anchor: "upcoming-event", label: "Next Event", color: "accent-cyan" },
+    { anchor: "rules", label: "Rules", color: "accent-orange" },
+    { anchor: "discord", label: "Discord", color: "accent-purple" },
   ];
 
   const closeSheet = () => setIsOpen(false);
@@ -76,16 +73,17 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
-                <Link key={item.path} href={item.path}>
-                  <Button
-                    variant="ghost"
-                    className={`text-light-text hover:${item.color} transition-colors duration-200 font-medium ${
-                      location === item.path ? item.color : ""
-                    }`}
-                  >
-                    {item.label}
-                  </Button>
-                </Link>
+                <a
+                  key={item.anchor}
+                  href={`#${item.anchor}`}
+                  className={`text-light-text hover:text-${item.color} transition-colors duration-200 font-medium`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById(item.anchor)?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  {item.label}
+                </a>
               ))}
             </div>
           </div>
@@ -101,16 +99,18 @@ const Navigation = () => {
               <SheetContent side="right" className="bg-dark-gray border-medium-gray">
                 <div className="flex flex-col space-y-4 mt-8">
                   {navItems.map((item) => (
-                    <Link key={item.path} href={item.path} onClick={closeSheet}>
-                      <Button
-                        variant="ghost"
-                        className={`w-full justify-start text-light-text hover:${item.color} transition-colors duration-200 ${
-                          location === item.path ? item.color : ""
-                        }`}
-                      >
-                        {item.label}
-                      </Button>
-                    </Link>
+                    <a
+                      key={item.anchor}
+                      href={`#${item.anchor}`}
+                      className={`block px-3 py-2 text-base font-medium text-light-text hover:text-${item.color} transition-colors duration-200`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsOpen(false);
+                        document.getElementById(item.anchor)?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                    >
+                      {item.label}
+                    </a>
                   ))}
                 </div>
               </SheetContent>

@@ -21,10 +21,10 @@ const RulesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Brief Rulebook */}
           <div className="bg-[#F2F2F2] border border-medium-gray p-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-24 h-24 border-t-4 border-r-4 border-accent-orange"></div>
+            <div className="absolute top-0 right-0 w-24 h-24 border-t-4 border-r-4 border-accent-cyan"></div>
             <div className="relative z-10">
               <div className="flex items-center mb-4">
-                <BookOpen className="h-8 w-8 text-accent-orange mr-3" />
+                <BookOpen className="h-8 w-8 text-accent-cyan mr-3" />
                 <h3 className="text-2xl font-black text-[#0D172B]">
                   Brief Ruleset
                 </h3>
@@ -32,7 +32,7 @@ const RulesSection = () => {
               <p className="text-[#0D172B]/80 mb-6">
                 Quick visual guide with essential rules and reminders. Perfect for an introduction or refresher of the rules.
               </p>
-              <Button className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center">
+              <Button className="bg-accent-cyan hover:bg-accent-cyan/90 text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center">
                 <Download className="h-4 w-4 mr-2" />
                 Download Brief Rules
               </Button>

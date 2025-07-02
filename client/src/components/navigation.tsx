@@ -76,7 +76,7 @@ const Navigation = () => {
                 <a
                   key={item.anchor}
                   href={`#${item.anchor}`}
-                  className={`text-light-text hover:text-${item.color} transition-colors duration-200 font-medium`}
+                  className={`text-light-text hover:text-${item.color} transition-all duration-300 font-medium transform hover:scale-110 hover:shadow-lg px-2 py-1 rounded`}
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById(item.anchor)?.scrollIntoView({ behavior: 'smooth' });
@@ -102,7 +102,7 @@ const Navigation = () => {
                     <a
                       key={item.anchor}
                       href={`#${item.anchor}`}
-                      className={`block px-3 py-2 text-base font-medium text-light-text hover:text-${item.color} transition-colors duration-200`}
+                      className={`block px-3 py-2 text-base font-medium text-light-text hover:text-${item.color} transition-all duration-300 transform hover:scale-105 hover:bg-${item.color}/10 rounded`}
                       onClick={(e) => {
                         e.preventDefault();
                         setIsOpen(false);

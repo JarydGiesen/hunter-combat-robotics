@@ -1,6 +1,12 @@
 import { Trophy, Settings, Shield } from "lucide-react";
+import { useTypewriter } from "@/hooks/use-typewriter";
 
 const CompetitionClasses = () => {
+  const { displayText: titleText, elementRef: titleRef } = useTypewriter({
+    text: "COMPETITION CLASSES",
+    speed: 80,
+    delay: 200
+  });
   const classes = [
     {
       name: "150g Plastic Antweight",

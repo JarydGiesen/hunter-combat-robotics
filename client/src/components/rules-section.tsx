@@ -1,15 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { FileText, Download, BookOpen } from "lucide-react";
+import { useTypewriter } from "@/hooks/use-typewriter";
 
 const RulesSection = () => {
+  const { displayText: titleText, elementRef: titleRef } = useTypewriter({
+    text: "COMPETITION RULES",
+    speed: 80,
+    delay: 200
+  });
 
 
   return (
     <section id="rules" className="py-20 bg-[#0D172B]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
-            COMPETITION <span className="text-accent-orange">RULES</span>
+          <h2 
+            ref={titleRef}
+            className="text-4xl md:text-5xl font-black text-light-text mb-4 min-h-[4rem]"
+          >
+            COMPETITION <span className="text-accent-orange">{titleText}</span>
           </h2>
           <p className="text-xl text-light-text/80 max-w-3xl mx-auto">
             Your bot will be scrutineered on the day to ensure it meets all the rules.

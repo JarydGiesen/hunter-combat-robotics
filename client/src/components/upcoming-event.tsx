@@ -9,7 +9,7 @@ const UpcomingEvent = () => {
           <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
             NEXT <span className="text-accent-cyan">COMBAT EVENT</span>
           </h2>
-          <p className="text-xl text-light-text/80">Don't miss the action</p>
+          <p className="text-xl text-light-text/80">Don't miss the action.</p>
         </div>
 
         <div className="bg-[#F2F2F2] border border-medium-gray p-8 lg:p-12 relative overflow-hidden">

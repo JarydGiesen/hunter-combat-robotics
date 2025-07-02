@@ -11,7 +11,7 @@ const CompetitionClasses = () => {
       features: [
         "Basic 3D printed Materials (PLA, ABS, PETG, PET, Nylon)",
         "Other materials that don't enhance armour or weapon",
-        "Other materials allowed at organisers discretion",
+        "Other materials allowed at organiser's discretion",
         "Active weapon not required",
       ],
     },

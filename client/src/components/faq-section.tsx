@@ -2,15 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "wouter";
-import { useTypewriter } from "@/hooks/use-typewriter";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const { displayText: titleText, elementRef: titleRef } = useTypewriter({
-    text: "FREQUENTLY ASKED QUESTIONS",
-    speed: 80,
-    delay: 200
-  });
 
   const faqs = [
     {
@@ -43,11 +37,9 @@ const FAQSection = () => {
     <section id="faq" className="py-20 bg-[#0D172B]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 
-            ref={titleRef}
-            className="text-4xl md:text-5xl font-black text-light-text mb-4 min-h-[4rem]"
-          >
-            <span className="text-accent-purple">{titleText}</span>
+          <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
+            FREQUENTLY ASKED{" "}
+            <span className="text-accent-purple">QUESTIONS</span>
           </h2>
           
         </div>

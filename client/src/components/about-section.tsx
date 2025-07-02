@@ -1,14 +1,8 @@
 import { Bot } from "lucide-react";
-import { useTypewriter } from "@/hooks/use-typewriter";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 const AboutSection = () => {
-  const { displayText: titleText, elementRef: titleRef } = useTypewriter({
-    text: "ABOUT HCR LEAGUE",
-    speed: 80,
-    delay: 200
-  });
   return (
     <section className="py-20 bg-[#F2F2F2]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

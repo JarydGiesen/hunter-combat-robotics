@@ -1,13 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Calendar, Share, Wrench } from "lucide-react";
-import { useTypewriter } from "@/hooks/use-typewriter";
 
 const DiscordSection = () => {
-  const { displayText: titleText, elementRef: titleRef } = useTypewriter({
-    text: "JOIN OUR DISCORD",
-    speed: 80,
-    delay: 200
-  });
   const features = [
     { icon: Wrench, text: "Technical help and advice" },
     { icon: Calendar, text: "Event announcements and reminders" },

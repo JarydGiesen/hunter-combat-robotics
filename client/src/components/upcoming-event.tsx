@@ -1,22 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Trophy, DollarSign } from "lucide-react";
-import { useTypewriter } from "@/hooks/use-typewriter";
 
 const UpcomingEvent = () => {
-  const { displayText: titleText, elementRef: titleRef } = useTypewriter({
-    text: "NEXT COMBAT EVENT",
-    speed: 80,
-    delay: 200
-  });
   return (
     <section id="upcoming-event" className="py-20 bg-[#0D172B]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 
-            ref={titleRef}
-            className="text-4xl md:text-5xl font-black text-light-text mb-4 min-h-[4rem]"
-          >
-            NEXT <span className="text-accent-cyan">{titleText}</span>
+          <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
+            NEXT <span className="text-accent-cyan">COMBAT EVENT</span>
           </h2>
           <p className="text-xl text-light-text/80">Don't miss the action.</p>
         </div>

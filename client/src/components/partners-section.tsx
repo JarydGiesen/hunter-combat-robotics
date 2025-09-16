@@ -8,18 +8,21 @@ const PartnersSection = () => {
       contribution: "Facility Partner",
       icon: Hammer,
       color: "accent-orange",
+      url: "https://lakemacfablab.org.au",
     },
     {
       name: "RoboTech Solutions",
       contribution: "Electronics Partner",
       icon: Cpu,
       color: "accent-cyan",
+      url: "https://robotechsolutions.com.au",
     },
     {
       name: "StreamTech Media",
       contribution: "Broadcasting Partner",
       icon: Video,
       color: "accent-purple",
+      url: "https://streamtechmedia.com.au",
     },
   ];
 
@@ -36,9 +39,13 @@ const PartnersSection = () => {
           {partners.map((partner, index) => {
             const Icon = partner.icon;
             return (
-              <div
+              <a
                 key={index}
-                className={`bg-dark-blue border border-medium-gray p-6 text-center hover:border-${partner.color} transition-colors duration-200 group`}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid={`link-partner-${partner.name.toLowerCase().replace(/\s+/g, '-')}`}
+                className={`block bg-dark-blue border border-medium-gray p-6 text-center hover:border-${partner.color} transition-colors duration-200 group cursor-pointer transform hover:scale-105`}
               >
                 <div
                   className={`text-${partner.color} mb-3 group-hover:scale-110 transition-transform duration-200 flex justify-center`}
@@ -51,7 +58,7 @@ const PartnersSection = () => {
                 <p className="text-sm text-light-text/60">
                   {partner.contribution}
                 </p>
-              </div>
+              </a>
             );
           })}
         </div>

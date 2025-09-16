@@ -30,6 +30,36 @@ const CompetitionWinners = () => {
       image: "/bot-3.jpg", // Third bot image
       borderColor: "accent-cyan",
     },
+    {
+      robotName: "Spinner Fury",
+      builderName: "Team Chaos",
+      weightClass: "Antweight (Open)",
+      event: "2nd Place - Robot Royale 4",
+      description:
+        "High-speed horizontal spinner with titanium weapon disk. Built for maximum destruction.",
+      image: "/bot-1.jpg", // Fourth bot image
+      borderColor: "accent-orange",
+    },
+    {
+      robotName: "Wedge Master",
+      builderName: "Team Precision",
+      weightClass: "Antweight (Plastic)",
+      event: "Best Design - Robot Royale 3",
+      description:
+        "Low-profile wedge bot with superior driving skills and tactical gameplay.",
+      image: "/bot-2.jpg", // Fifth bot image
+      borderColor: "accent-purple",
+    },
+    {
+      robotName: "Thunder Clamp",
+      builderName: "Team Voltage",
+      weightClass: "Antweight (Open)",
+      event: "Most Destructive - Robot Royale 3",
+      description:
+        "Powerful clamping bot with crushing force. Known for spectacular control victories.",
+      image: "/bot-3.jpg", // Sixth bot image
+      borderColor: "accent-cyan",
+    },
   ];
 
   return (

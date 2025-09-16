@@ -18,9 +18,9 @@ const Home = () => {
       <CompetitionClasses />
       <RulesSection />
       <GettingStartedSection />
+      <DiscordSection />
       <CompetitionWinners />
       <FAQSection />
-      <DiscordSection />
       <PartnersSection />
     </div>
   );

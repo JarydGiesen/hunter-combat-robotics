@@ -5,26 +5,24 @@ const CompetitionClasses = () => {
     {
       name: "150g Plastic Antweight",
       description:
-        "Beginner-friendly class with limitations on construction materials",
+        "Beginner-friendly class with limitations on construction materials.",
       icon: Trophy,
       color: "accent-orange",
       features: [
-        "Basic 3D printed Materials (PLA, ABS, PETG, PET, Nylon)",
-        "Other materials that don't enhance armour or weapon",
-        "Other materials allowed at organiser's discretion",
-        "Active weapon not required",
+        "Basic Plastics only (PLA, ABS, PETG, PET, Nylon)",
+        "Any materials that don't enhance armour, chassis, or weapon",
+        "Active weapon optional",
       ],
     },
     {
       name: "150g Open Antweight",
       description:
-        "A more challenging, destructive class with no material restrictions.",
+        "A more challenging and destructive class with no material restrictions.",
       icon: Settings,
       color: "accent-purple",
       features: [
         "Any materials permitted",
-        "Any fabrication methods",
-        "Expect metal weapons and chassis'",
+        "Expect metal weapons and armoured chassis'",
         "Must have an active weapon",
       ],
     },
@@ -51,7 +49,6 @@ const CompetitionClasses = () => {
                 key={index}
                 className={`bg-[#0D172B] border-4 border-${classInfo.color} p-8 relative overflow-hidden group hover:scale-105 transition-transform duration-300`}
               >
-
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">
                     <Icon

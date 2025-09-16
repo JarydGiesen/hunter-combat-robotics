@@ -9,6 +9,7 @@ const PartnersSection = () => {
       icon: Hammer,
       color: "accent-orange",
       url: "https://lakemacfablab.org.au",
+      logo: "/partner-fablab.png",
     },
     {
       name: "RoboTech Solutions",
@@ -16,6 +17,7 @@ const PartnersSection = () => {
       icon: Cpu,
       color: "accent-cyan",
       url: "https://robotechsolutions.com.au",
+      logo: "/partner-robotech.png",
     },
     {
       name: "StreamTech Media",
@@ -23,6 +25,7 @@ const PartnersSection = () => {
       icon: Video,
       color: "accent-purple",
       url: "https://streamtechmedia.com.au",
+      logo: "/partner-streamtech.png",
     },
   ];
 
@@ -31,7 +34,7 @@ const PartnersSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
-            WE'D LIKE TO <span className="text-accent-orange">THANK</span>
+            WE'D LIKE TO <span className="text-accent-cyan">THANK</span>
           </h2>
         </div>
 
@@ -47,10 +50,21 @@ const PartnersSection = () => {
                 data-testid={`link-partner-${partner.name.toLowerCase().replace(/\s+/g, '-')}`}
                 className={`block bg-dark-blue border border-medium-gray p-6 text-center hover:border-${partner.color} transition-colors duration-200 group cursor-pointer transform hover:scale-105`}
               >
-                <div
-                  className={`text-${partner.color} mb-3 group-hover:scale-110 transition-transform duration-200 flex justify-center`}
-                >
-                  <Icon className="h-12 w-12" />
+                <div className="mb-3 group-hover:scale-110 transition-transform duration-200 flex justify-center">
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    className="h-12 w-auto"
+                    onError={(e) => {
+                      // Fallback to icon if logo doesn't load
+                      e.currentTarget.style.display = "none";
+                      const fallbackDiv = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (fallbackDiv) fallbackDiv.style.display = "flex";
+                    }}
+                  />
+                  <div className={`hidden text-${partner.color} justify-center`}>
+                    <Icon className="h-12 w-12" />
+                  </div>
                 </div>
                 <h3 className="text-lg font-bold text-light-text mb-2">
                   {partner.name}

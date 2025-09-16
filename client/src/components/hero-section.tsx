@@ -17,7 +17,7 @@ const HeroSection = () => {
   return (
     <section id="home" className="relative overflow-hidden">
       {/* Background Video with proper aspect ratio */}
-      <AspectRatio ratio={32/9} className="w-full">
+      <AspectRatio ratio={8/3} className="w-full">
         <div className="absolute inset-0 w-full h-full">
           <video
             className="w-full h-full object-cover"

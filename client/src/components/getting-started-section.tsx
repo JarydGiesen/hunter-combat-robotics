@@ -46,7 +46,10 @@ const GettingStartedSection = () => {
           <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
             BUILD YOUR <span className="text-accent-orange">BOT</span>
           </h2>
-          <p className="text-xl text-light-text/80 max-w-3xl mx-auto">From concept to combat-ready. Getting your bot in the arena is easier than you might think.</p>
+          <p className="text-xl text-light-text/80 max-w-3xl mx-auto">
+            From concept to combat-ready. Getting your bot in the arena is
+            easier than you might think.
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => {
@@ -74,11 +77,15 @@ const GettingStartedSection = () => {
           })}
         </div>
         <div className="text-center mt-12">
-          <Button 
+          <Button
             className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold py-4 px-8 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-            onClick={() => document.getElementById('discord')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() =>
+              document
+                .getElementById("discord")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
-            Join Our Community
+            Get started and join Our Community
           </Button>
         </div>
       </div>

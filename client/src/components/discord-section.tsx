@@ -11,19 +11,19 @@ const DiscordSection = () => {
   return (
     <section id="discord" className="py-20 bg-[#F2F2F2]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#0D172B] border border-medium-gray p-8 lg:p-12 relative overflow-hidden">
+        <div className="bg-[#0D172B] border-4 border-accent-cyan p-8 lg:p-12 relative overflow-hidden">
           {/* Decorative Discord-style elements */}
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent-purple via-accent-cyan to-accent-orange"></div>
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent-cyan via-accent-cyan to-accent-cyan"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center mb-6">
-                <MessageCircle className="h-12 w-12 text-accent-purple mr-4" />
+                <MessageCircle className="h-12 w-12 text-accent-cyan mr-4" />
                 <div>
                   <h2 className="text-4xl font-black text-light-text">
                     JOIN OUR
                   </h2>
-                  <h2 className="text-4xl font-black text-accent-purple">
+                  <h2 className="text-4xl font-black text-accent-cyan">
                     DISCORD
                   </h2>
                 </div>
@@ -41,10 +41,10 @@ const DiscordSection = () => {
                 {features.map((feature, index) => {
                   const Icon = feature.icon;
                   const colors = [
-                    "accent-orange",
                     "accent-cyan",
-                    "accent-purple",
-                    "accent-orange",
+                    "accent-cyan",
+                    "accent-cyan",
+                    "accent-cyan",
                   ];
                   return (
                     <div
@@ -58,7 +58,7 @@ const DiscordSection = () => {
                 })}
               </div>
 
-              <Button className="bg-accent-purple hover:bg-accent-purple/90 text-light-text font-bold py-4 px-8 flex items-center transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+              <Button className="bg-accent-cyan hover:bg-accent-cyan/90 text-light-text font-bold py-4 px-8 flex items-center transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                 <MessageCircle className="h-5 w-5 mr-3" />
                 JOIN DISCORD SERVER
               </Button>
@@ -70,7 +70,7 @@ const DiscordSection = () => {
                 alt="Diverse group of engineers collaborating on robot designs"
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
-              <div className="absolute -top-6 -right-6 bg-accent-purple text-[#F2F2F2] p-4 rounded">
+              <div className="absolute -top-6 -right-6 bg-accent-cyan text-[#F2F2F2] p-4 rounded">
                 <MessageCircle className="h-8 w-8" />
               </div>
             </div>

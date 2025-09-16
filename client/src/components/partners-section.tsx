@@ -38,7 +38,7 @@ const PartnersSection = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {partners.map((partner, index) => {
             const Icon = partner.icon;
             return (
@@ -48,7 +48,7 @@ const PartnersSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid={`link-partner-${partner.name.toLowerCase().replace(/\s+/g, "-")}`}
-                className={`block bg-dark-blue border border-medium-gray p-6 text-center hover:border-${partner.color} transition-colors duration-200 group cursor-pointer transform hover:scale-105`}
+                className={`flex flex-col bg-dark-blue border border-medium-gray p-6 text-center hover:border-${partner.color} transition-colors duration-200 group cursor-pointer transform hover:scale-105 h-64`}
               >
                 <div className="mb-3 group-hover:scale-110 transition-transform duration-200 flex justify-center items-center h-32 w-full">
                   <img
@@ -69,12 +69,14 @@ const PartnersSection = () => {
                     <Icon className="h-12 w-12" />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-light-text mb-2">
-                  {partner.name}
-                </h3>
-                <p className="text-sm text-light-text/60">
-                  {partner.contribution}
-                </p>
+                <div className="flex-1 flex flex-col justify-end">
+                  <h3 className="text-lg font-bold text-light-text mb-2">
+                    {partner.name}
+                  </h3>
+                  <p className="text-sm text-light-text/60">
+                    {partner.contribution}
+                  </p>
+                </div>
               </a>
             );
           })}

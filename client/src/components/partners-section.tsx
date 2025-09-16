@@ -5,27 +5,27 @@ const PartnersSection = () => {
   const partners = [
     {
       name: "Lake Macquarie FabLab",
-      contribution: "Facility Partner",
+      contribution: "",
       icon: Hammer,
       color: "accent-orange",
-      url: "https://lakemacfablab.org.au",
+      url: "https://library.lakemac.com.au/Explore/Fab-Lab",
       logo: "/partner-fablab.png",
     },
     {
-      name: "RoboTech Solutions",
-      contribution: "Electronics Partner",
+      name: "Hunter Innovation and Science Hub",
+      contribution: "",
       icon: Cpu,
       color: "accent-cyan",
-      url: "https://robotechsolutions.com.au",
-      logo: "/partner-robotech.png",
+      url: "https://hish.org.au/",
+      logo: "/partner-hish.png",
     },
     {
-      name: "StreamTech Media",
-      contribution: "Broadcasting Partner",
+      name: "Robot Royale",
+      contribution: "",
       icon: Video,
       color: "accent-purple",
-      url: "https://streamtechmedia.com.au",
-      logo: "/partner-streamtech.png",
+      url: "https://linktr.ee/robotroyale",
+      logo: "/partner-rr.png",
     },
   ];
 
@@ -47,22 +47,25 @@ const PartnersSection = () => {
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                data-testid={`link-partner-${partner.name.toLowerCase().replace(/\s+/g, '-')}`}
+                data-testid={`link-partner-${partner.name.toLowerCase().replace(/\s+/g, "-")}`}
                 className={`block bg-dark-blue border border-medium-gray p-6 text-center hover:border-${partner.color} transition-colors duration-200 group cursor-pointer transform hover:scale-105`}
               >
-                <div className="mb-3 group-hover:scale-110 transition-transform duration-200 flex justify-center">
+                <div className="mb-3 group-hover:scale-110 transition-transform duration-200 flex justify-center items-center h-32 w-full">
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className="h-12 w-auto"
+                    className="max-h-full max-w-full object-contain"
                     onError={(e) => {
                       // Fallback to icon if logo doesn't load
                       e.currentTarget.style.display = "none";
-                      const fallbackDiv = e.currentTarget.nextElementSibling as HTMLElement;
+                      const fallbackDiv = e.currentTarget
+                        .nextElementSibling as HTMLElement;
                       if (fallbackDiv) fallbackDiv.style.display = "flex";
                     }}
                   />
-                  <div className={`hidden text-${partner.color} justify-center`}>
+                  <div
+                    className={`hidden text-${partner.color} justify-center items-center h-full w-full`}
+                  >
                     <Icon className="h-12 w-12" />
                   </div>
                 </div>

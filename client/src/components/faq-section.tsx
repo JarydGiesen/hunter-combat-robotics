@@ -10,22 +10,22 @@ const FAQSection = () => {
     {
       question: "Whats the difference between plastic and open classes?",
       answer:
-        "The plastic antweight (plantweight) class is designed to be an approachable and beginner friendly class. This class only allows 3D printed plastics to be used for chassis and weapon parts. Metal bolts, washers and any other non-structural parts are typically allowed. Open class is the more advanced of the two allowing for any materials or metals to be used in bot construction. Check the rules for final rulings and all restrictions on these classes.",
+        "The plastic antweight (plantweight) class is designed to be an approachable and beginner friendly class. This class only allows simple plastics to be used for chassis and weapon parts. Metal bolts, washers and any other non-structural parts are allowed as long as they are not used to enhance a weapon, or the strength of your bot (in other words you can use bolts to screw your bot together, but not to give extra hitting power to something like a spinner). Check the full ruleset for allowed materials, but more bots are 3d printed with PLA, ABS, or PETG. Open class is the more advanced of the two allowing for any materials or metals to be used in bot construction. Expect lots of destruction and very well designed bots in this class. Check the rules for final rulings and all restrictions on these classes.",
     },
     {
       question: "Do I need prior robotics experience?",
       answer:
-        "Not at all! Combat robots see many succesful builders starting from zero robotics experience. The builder community is especially helpful to beginners with design and building techniques being shared freely. Joining our Discord would be your 1st point of contact for getting help with a bot!",
+        "Not at all! Combat robots sees many succesful builders starting from zero robotics experience. The builder community is especially helpful to beginners with design and building techniques being shared freely. An antweight combat robot is a great first project to get into the world of robotics! Joining our Discord would be your first point of contact for getting help with a bot!",
     },
     {
       question: "What's the typical cost to build a robot?",
       answer:
-        "Costs can vary significantly depending on bot and complexity. Getting a reasonably competitive antweight ready to fight will set you back $150-$250 AUD with about $80 of that being for the radio and battery charger. Many internal parts are reusable in future bots and running costs for competing in an event are low.",
+        "Costs can vary significantly depending on bot and complexity. Getting a reasonably competitive antweight ready to fight will set you back $200-$300 AUD with about half of that being equipment you would use across multiple bots (transmitter, battery charger, etc.). Many internal parts are reusable in future bots and running costs for competing in an event are low. This is a destructive sport, but you need replacement parts far less often than you may think.",
     },
     {
       question: "How often do competitions happen?",
       answer:
-        "We try to host three to four tournaments a year. Craving more? We run our ruleset close to Robot Royale which also runs three to four times a year in Sydney. A bot built to our ruleset is likely able to be entered into their tournament.",
+        "We try to host three to four tournaments a year. Craving more? We run our ruleset exztremely close to Robot Royale (ideally identical) which also runs three to four times a year in Sydney. A bot built to our ruleset is likely be able to compete in Robot Royale. You will also find a wealth of events across Australia.",
     },
   ];
 
@@ -41,12 +41,14 @@ const FAQSection = () => {
             FREQUENTLY ASKED{" "}
             <span className="text-accent-purple">QUESTIONS</span>
           </h2>
-          
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-medium-gray bg-white overflow-hidden">
+            <div
+              key={index}
+              className="border border-medium-gray bg-white overflow-hidden"
+            >
               <button
                 className="w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors duration-200"
                 onClick={() => toggleFAQ(index)}
@@ -54,15 +56,17 @@ const FAQSection = () => {
                 <span className="text-lg font-semibold text-[#0D172B]">
                   {faq.question}
                 </span>
-                <ChevronDown className={`h-5 w-5 text-accent-orange transition-transform duration-300 ${
-                  openIndex === index ? 'rotate-180' : ''
-                }`} />
+                <ChevronDown
+                  className={`h-5 w-5 text-accent-orange transition-transform duration-300 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index 
-                    ? 'max-h-96 opacity-100' 
-                    : 'max-h-0 opacity-0'
+                  openIndex === index
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="px-6 pb-6">
@@ -78,8 +82,12 @@ const FAQSection = () => {
         <div className="text-center mt-12">
           <Button
             variant="outline"
-            className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-white font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-            onClick={() => document.getElementById('discord')?.scrollIntoView({ behavior: 'smooth' })}
+            className="border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-white font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            onClick={() =>
+              document
+                .getElementById("discord")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             ASK ON DISCORD
           </Button>

@@ -41,9 +41,9 @@ const DiscordSection = () => {
                 {features.map((feature, index) => {
                   const Icon = feature.icon;
                   const colors = [
+                    "accent-orange",
                     "accent-cyan",
-                    "accent-cyan",
-                    "accent-cyan",
+                    "accent-purple",
                     "accent-cyan",
                   ];
                   return (

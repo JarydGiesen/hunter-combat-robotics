@@ -4,7 +4,7 @@ const CompetitionWinners = () => {
       robotName: "Hex Witch",
       builderName: "Team Hot Glue",
       weightClass: "Antweight (Open)",
-      event: "Bluest Bot -  Robot Royale 4",
+      event: "Bluest Bot -  Robot Royale 4 & 5",
       description:
         "4WD Hammersaw with a modular front-end. Harnesses the magical power of hot glue.",
       image: "/bot-1.jpg", // First bot image
@@ -31,34 +31,33 @@ const CompetitionWinners = () => {
       borderColor: "accent-cyan",
     },
     {
-      robotName: "Spinner Fury",
-      builderName: "Team Chaos",
-      weightClass: "Antweight (Open)",
-      event: "2nd Place - Robot Royale 4",
-      description:
-        "High-speed horizontal spinner with titanium weapon disk. Built for maximum destruction.",
-      image: "/bot-1.jpg", // Fourth bot image
-      borderColor: "accent-orange",
-    },
-    {
-      robotName: "Wedge Master",
-      builderName: "Team Precision",
+      robotName: "I built this in a cave",
+      builderName: "BotBotics",
       weightClass: "Antweight (Plastic)",
-      event: "Best Design - Robot Royale 3",
+      event: "3rd Place - Robot Royale 5",
       description:
-        "Low-profile wedge bot with superior driving skills and tactical gameplay.",
-      image: "/bot-2.jpg", // Fifth bot image
+        "A large full-body lifter wedge, that is also incredibly fast. Really fast...",
+      image: "/bot-4.jpg", // Fourth bot image
       borderColor: "accent-purple",
     },
     {
-      robotName: "Thunder Clamp",
-      builderName: "Team Voltage",
+      robotName: "Low Earth Orbit (LEO)",
+      builderName: "HyperFocus3D",
       weightClass: "Antweight (Open)",
-      event: "Most Destructive - Robot Royale 3",
+      event: "1st Place - Robot Royale 5",
       description:
-        "Powerful clamping bot with crushing force. Known for spectacular control victories.",
-      image: "/bot-3.jpg", // Sixth bot image
+        "4wd, hard-hitting vertical spinner that will send your bot into low earth orbit.",
+      image: "/bot-5.jpg", // Fifth bot image
       borderColor: "accent-cyan",
+    },
+    {
+      robotName: "Fighting Nemo",
+      builderName: "Team Plot Armour",
+      weightClass: "Antweight (Plastic)",
+      event: "Fish?",
+      description: "A staggering ineffective fish bot with a flipper tail.",
+      image: "/bot-6.jpg", // Sixth bot image
+      borderColor: "accent-orange",
     },
   ];
 
@@ -97,7 +96,7 @@ const CompetitionWinners = () => {
                   >
                     {winner.weightClass}
                   </span>
-                  <span className="text-accent-cyan text-sm font-medium">
+                  <span className="text-accent-white text-sm font-medium">
                     {winner.event}
                   </span>
                 </div>

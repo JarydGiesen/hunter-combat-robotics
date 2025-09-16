@@ -34,10 +34,10 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-[#0D172B]">
+    <section id="faq" className="py-20 bg-[#F2F2F2]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-light-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-black text-[#0D172B] mb-4">
             FREQUENTLY ASKED{" "}
             <span className="text-accent-purple">QUESTIONS</span>
           </h2>
@@ -46,12 +46,12 @@ const FAQSection = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-medium-gray bg-dark-blue overflow-hidden">
+            <div key={index} className="border border-medium-gray bg-white overflow-hidden">
               <button
-                className="w-full text-left p-6 flex justify-between items-center hover:bg-dark-gray/50 transition-colors duration-200"
+                className="w-full text-left p-6 flex justify-between items-center hover:bg-gray-100 transition-colors duration-200"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-lg font-semibold text-light-text">
+                <span className="text-lg font-semibold text-[#0D172B]">
                   {faq.question}
                 </span>
                 <ChevronDown className={`h-5 w-5 text-accent-orange transition-transform duration-300 ${
@@ -66,7 +66,7 @@ const FAQSection = () => {
                 }`}
               >
                 <div className="px-6 pb-6">
-                  <p className="text-light-text/80 leading-relaxed">
+                  <p className="text-[#0D172B]/80 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -78,7 +78,7 @@ const FAQSection = () => {
         <div className="text-center mt-12">
           <Button
             variant="outline"
-            className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-white font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             onClick={() => document.getElementById('discord')?.scrollIntoView({ behavior: 'smooth' })}
           >
             ASK ON DISCORD

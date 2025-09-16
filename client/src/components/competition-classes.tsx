@@ -51,13 +51,6 @@ const CompetitionClasses = () => {
                 key={index}
                 className={`bg-[#0D172B] border-4 border-${classInfo.color} p-8 relative overflow-hidden group hover:scale-105 transition-transform duration-300`}
               >
-                {/* Decorative corner elements */}
-                <div
-                  className={`absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-${classInfo.color}/50`}
-                ></div>
-                <div
-                  className={`absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-${classInfo.color}/50`}
-                ></div>
 
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">

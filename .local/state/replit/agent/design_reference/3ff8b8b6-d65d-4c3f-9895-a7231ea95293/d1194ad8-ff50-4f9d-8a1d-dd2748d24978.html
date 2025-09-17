@@ -1,0 +1,855 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combat Robotics League - Professional Robot Fighting Competition</title>
+    <meta name="description" content="Join our professional combat robotics league. Find rules, events, getting started guides, and connect with our community.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'league-navy': '#0A0E27',
+                    'league-dark': '#1A1F3A',
+                    'league-cyan': '#00D4FF',
+                    'league-orange': '#FF6B35',
+                    'league-slate': '#64748B'
+                },
+                fontFamily: {
+                    'heading': ['Inter', 'system-ui', 'sans-serif']
+                },
+                animation: {
+                    'pulse-slow': 'pulse 3s infinite',
+                    'float': 'float 6s ease-in-out infinite'
+                },
+                keyframes: {
+                    float: {
+                        '0%, 100%': { transform: 'translateY(0px)' },
+                        '50%': { transform: 'translateY(-10px)' }
+                    }
+                }
+            }
+        }
+    };
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-league-navy text-white font-sans">
+    <!-- Navigation -->
+    <!-- @COMPONENT: Navigation [fixed header with mobile menu] -->
+    <nav class="fixed top-0 w-full bg-league-navy/95 backdrop-blur-sm border-b border-league-dark z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-heading font-bold text-league-cyan">CRL</h1>
+                    </div>
+                    <div class="hidden md:block ml-8">
+                        <div class="flex items-baseline space-x-6">
+                            <a href="#home" class="nav-link text-white hover:text-league-cyan transition-colors duration-200 px-3 py-2">Home</a>
+                            <a href="#events" class="nav-link text-league-slate hover:text-league-cyan transition-colors duration-200 px-3 py-2">Events</a>
+                            <a href="#rules" class="nav-link text-league-slate hover:text-league-cyan transition-colors duration-200 px-3 py-2">Rules</a>
+                            <a href="#getting-started" class="nav-link text-league-slate hover:text-league-cyan transition-colors duration-200 px-3 py-2">Get Started</a>
+                            <a href="#faq" class="nav-link text-league-slate hover:text-league-cyan transition-colors duration-200 px-3 py-2">FAQ</a>
+                            <a href="#discord" class="nav-link text-league-slate hover:text-league-cyan transition-colors duration-200 px-3 py-2">Discord</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-league-cyan focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-league-dark">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-white hover:text-league-cyan transition-colors duration-200">Home</a>
+                <a href="#events" class="block px-3 py-2 text-league-slate hover:text-league-cyan transition-colors duration-200">Events</a>
+                <a href="#rules" class="block px-3 py-2 text-league-slate hover:text-league-cyan transition-colors duration-200">Rules</a>
+                <a href="#getting-started" class="block px-3 py-2 text-league-slate hover:text-league-cyan transition-colors duration-200">Get Started</a>
+                <a href="#faq" class="block px-3 py-2 text-league-slate hover:text-league-cyan transition-colors duration-200">FAQ</a>
+                <a href="#discord" class="block px-3 py-2 text-league-slate hover:text-league-cyan transition-colors duration-200">Discord</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- Hero Section -->
+    <!-- @COMPONENT: HeroSection [video background with overlay content] -->
+    <section id="home" class="relative h-screen overflow-hidden">
+        <!-- Video Background -->
+        <div class="absolute inset-0 w-full h-full">
+            <!-- Combat robots in action during a tournament -->
+            <video 
+                class="w-full h-full object-cover" 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                data-mock="true" 
+                data-implementation="Replace with actual combat robotics footage">
+                <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-league-navy/70"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <div class="text-center max-w-4xl mx-auto px-4">
+                <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6 animate-fade-in">
+                    Combat Robotics
+                    <span class="text-league-cyan block">League</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                    Where engineering meets destruction. Join the ultimate battleground for combat robotics.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#getting-started" class="bg-league-cyan text-league-navy px-8 py-3 rounded-lg font-semibold hover:bg-white transition-colors duration-200 transform hover:scale-105">
+                        Get Started
+                    </a>
+                    <a href="#events" class="border-2 border-league-cyan text-league-cyan px-8 py-3 rounded-lg font-semibold hover:bg-league-cyan hover:text-league-navy transition-all duration-200 transform hover:scale-105">
+                        View Events
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-league-cyan"></i>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- Events Section -->
+    <!-- @COMPONENT: EventsSection [upcoming events display] -->
+    <section id="events" class="py-20 bg-league-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
+                    Upcoming Events
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Join us for electrifying battles throughout the year
+                </p>
+            </div>
+            
+            <!-- @MAP: events.map(event => ( -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event Card 1 -->
+                <div class="bg-league-navy rounded-xl overflow-hidden border border-gray-700 hover:border-league-cyan transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <!-- Robot arena with sparks flying during intense competition -->
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" alt="Robot competition arena" class="w-full h-48 object-cover" data-mock-image="true">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-league-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Championship
+                            </span>
+                            <span class="text-league-slate text-sm" data-bind="event.date">March 15, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-white mb-2" data-bind="event.title">
+                            Spring Championship
+                        </h3>
+                        <p class="text-gray-300 mb-4" data-bind="event.description">
+                            Our biggest event of the year featuring heavyweight and middleweight divisions.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-league-cyan font-semibold" data-bind="event.location">
+                                <i class="fas fa-map-marker-alt mr-2"></i>Tech Arena
+                            </span>
+                            <button class="text-league-cyan hover:text-white transition-colors" data-event="click:registerForEvent">
+                                Register <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="bg-league-navy rounded-xl overflow-hidden border border-gray-700 hover:border-league-cyan transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <!-- Workshop environment with tools and robot parts -->
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" alt="Engineering workshop with tools" class="w-full h-48 object-cover" data-mock-image="true">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Workshop
+                            </span>
+                            <span class="text-league-slate text-sm" data-bind="event.date">April 8, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-white mb-2" data-bind="event.title">
+                            Builder's Workshop
+                        </h3>
+                        <p class="text-gray-300 mb-4" data-bind="event.description">
+                            Learn from veterans and get hands-on experience building combat robots.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-league-cyan font-semibold" data-bind="event.location">
+                                <i class="fas fa-map-marker-alt mr-2"></i>Maker Space
+                            </span>
+                            <button class="text-league-cyan hover:text-white transition-colors" data-event="click:registerForEvent">
+                                Join <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="bg-league-navy rounded-xl overflow-hidden border border-gray-700 hover:border-league-cyan transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <!-- Crowd watching exciting robot competition -->
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300" alt="Technology competition event with audience" class="w-full h-48 object-cover" data-mock-image="true">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Tournament
+                            </span>
+                            <span class="text-league-slate text-sm" data-bind="event.date">June 22, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-white mb-2" data-bind="event.title">
+                            Summer Showdown
+                        </h3>
+                        <p class="text-gray-300 mb-4" data-bind="event.description">
+                            Mid-year tournament featuring beetle and antweight divisions.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-league-cyan font-semibold" data-bind="event.location">
+                                <i class="fas fa-map-marker-alt mr-2"></i>Convention Center
+                            </span>
+                            <button class="text-league-cyan hover:text-white transition-colors" data-event="click:registerForEvent">
+                                Register <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+        </div>
+    </section>
+    <!-- @END_COMPONENT: EventsSection -->
+
+    <!-- Rules Section -->
+    <!-- @COMPONENT: RulesSection [organized rules display] -->
+    <section id="rules" class="py-20 bg-league-navy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
+                    Competition Rules
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Fair play and safety guidelines for all participants
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Safety Rules -->
+                <div class="bg-league-dark rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-red-500 p-3 rounded-lg mr-4">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white">Safety Requirements</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-check text-league-cyan mt-1 mr-3"></i>
+                            <span>All robots must have a functioning killswitch accessible from outside the arena</span>
+                        </li>
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-check text-league-cyan mt-1 mr-3"></i>
+                            <span>Weapons must be completely disabled when not in active competition</span>
+                        </li>
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-check text-league-cyan mt-1 mr-3"></i>
+                            <span>Safety gear required in pit areas at all times</span>
+                        </li>
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-check text-league-cyan mt-1 mr-3"></i>
+                            <span>Mandatory safety inspection before each competition</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Weight Classes -->
+                <div class="bg-league-dark rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-league-cyan p-3 rounded-lg mr-4">
+                            <i class="fas fa-weight-hanging text-league-navy text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white">Weight Classes</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-2 border-b border-gray-600" data-mock="true">
+                            <span class="text-white font-semibold">Antweight</span>
+                            <span class="text-league-cyan">1 lb (454g)</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gray-600" data-mock="true">
+                            <span class="text-white font-semibold">Beetleweight</span>
+                            <span class="text-league-cyan">3 lb (1.36kg)</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-gray-600" data-mock="true">
+                            <span class="text-white font-semibold">Middleweight</span>
+                            <span class="text-league-cyan">12 lb (5.44kg)</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2" data-mock="true">
+                            <span class="text-white font-semibold">Heavyweight</span>
+                            <span class="text-league-cyan">250 lb (113kg)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combat Rules -->
+                <div class="bg-league-dark rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-league-orange p-3 rounded-lg mr-4">
+                            <i class="fas fa-fist-raised text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white">Combat Guidelines</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-clock text-league-cyan mt-1 mr-3"></i>
+                            <span>Standard match duration: 3 minutes</span>
+                        </li>
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-trophy text-league-cyan mt-1 mr-3"></i>
+                            <span>Victory conditions: KO, TKO, or judge's decision</span>
+                        </li>
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-ban text-league-cyan mt-1 mr-3"></i>
+                            <span>No intentional targeting of opponent's electronics</span>
+                        </li>
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-handshake text-league-cyan mt-1 mr-3"></i>
+                            <span>Good sportsmanship required at all times</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Technical Specs -->
+                <div class="bg-league-dark rounded-xl p-8 border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-500 p-3 rounded-lg mr-4">
+                            <i class="fas fa-cog text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-white">Technical Requirements</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-battery-half text-league-cyan mt-1 mr-3"></i>
+                            <span>Maximum voltage: 48V for heavyweight, scaled down for smaller classes</span>
+                        </li>
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-wifi text-league-cyan mt-1 mr-3"></i>
+                            <span>Radio frequency coordination required</span>
+                        </li>
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-tools text-league-cyan mt-1 mr-3"></i>
+                            <span>Weapon limitations based on class and safety considerations</span>
+                        </li>
+                        <li class="flex items-start" data-mock="true">
+                            <i class="fas fa-ruler text-league-cyan mt-1 mr-3"></i>
+                            <span>Dimensional restrictions apply to ensure arena compatibility</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-league-cyan text-league-navy px-8 py-3 rounded-lg font-semibold hover:bg-white transition-colors duration-200 transform hover:scale-105" data-event="click:downloadRules">
+                    Download Full Rulebook
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: RulesSection -->
+
+    <!-- Getting Started Section -->
+    <!-- @COMPONENT: GettingStartedSection [step-by-step guide] -->
+    <section id="getting-started" class="py-20 bg-gradient-to-b from-league-dark to-league-navy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
+                    Getting Started
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Your journey into combat robotics begins here
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center group">
+                    <div class="bg-league-navy rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 border-4 border-league-cyan group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-2xl font-bold text-league-cyan">1</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-white mb-4">Learn the Basics</h3>
+                    <p class="text-gray-300 mb-6">Study our rules, watch competition videos, and understand the different weight classes.</p>
+                    <button class="text-league-cyan hover:text-white transition-colors" data-event="click:viewResources">
+                        View Resources <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center group">
+                    <div class="bg-league-navy rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 border-4 border-league-cyan group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-2xl font-bold text-league-cyan">2</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-white mb-4">Join Our Community</h3>
+                    <p class="text-gray-300 mb-6">Connect with experienced builders on Discord and attend local meetups.</p>
+                    <button class="text-league-cyan hover:text-white transition-colors" data-event="click:joinDiscord">
+                        Join Discord <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center group">
+                    <div class="bg-league-navy rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 border-4 border-league-cyan group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-2xl font-bold text-league-cyan">3</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-white mb-4">Start Building</h3>
+                    <p class="text-gray-300 mb-6">Begin with a smaller weight class and focus on reliability over complexity.</p>
+                    <button class="text-league-cyan hover:text-white transition-colors" data-event="click:viewGuides">
+                        Build Guides <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center group">
+                    <div class="bg-league-navy rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 border-4 border-league-cyan group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-2xl font-bold text-league-cyan">4</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-white mb-4">Compete</h3>
+                    <p class="text-gray-300 mb-6">Register for your first event and experience the thrill of combat robotics.</p>
+                    <button class="text-league-cyan hover:text-white transition-colors" data-event="click:registerForCompetition">
+                        Register Now <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Resources Section -->
+            <div class="mt-20 bg-league-navy rounded-2xl p-8">
+                <h3 class="text-2xl font-heading font-bold text-white mb-8 text-center">Essential Resources</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center p-6 bg-league-dark rounded-xl border border-gray-700">
+                        <i class="fas fa-book text-3xl text-league-cyan mb-4"></i>
+                        <h4 class="text-lg font-semibold text-white mb-2">Build Guides</h4>
+                        <p class="text-gray-300 text-sm">Comprehensive tutorials for your first robot</p>
+                    </div>
+                    <div class="text-center p-6 bg-league-dark rounded-xl border border-gray-700">
+                        <i class="fas fa-shopping-cart text-3xl text-league-orange mb-4"></i>
+                        <h4 class="text-lg font-semibold text-white mb-2">Parts List</h4>
+                        <p class="text-gray-300 text-sm">Recommended components and suppliers</p>
+                    </div>
+                    <div class="text-center p-6 bg-league-dark rounded-xl border border-gray-700">
+                        <i class="fas fa-tools text-3xl text-green-500 mb-4"></i>
+                        <h4 class="text-lg font-semibold text-white mb-2">Tool Guide</h4>
+                        <p class="text-gray-300 text-sm">Essential tools for robot construction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: GettingStartedSection -->
+
+    <!-- FAQ Section -->
+    <!-- @COMPONENT: FAQSection [expandable questions] -->
+    <section id="faq" class="py-20 bg-league-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-300">
+                    Get answers to common questions about combat robotics
+                </p>
+            </div>
+            
+            <!-- @STATE: expandedFAQ:string = '' -->
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-league-navy rounded-xl border border-gray-700" data-mock="true">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:text-league-cyan transition-colors" data-event="click:toggleFAQ" data-faq-id="cost">
+                        <span class="text-lg font-semibold text-white">How much does it cost to build a combat robot?</span>
+                        <i class="fas fa-chevron-down text-league-cyan transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                        <p>Costs vary significantly by weight class and complexity. A basic beetleweight (3lb) robot can be built for $200-500, while a competitive heavyweight (250lb) robot can cost $5,000-20,000+. We recommend starting with smaller classes to learn the fundamentals before investing in larger bots.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-league-navy rounded-xl border border-gray-700" data-mock="true">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:text-league-cyan transition-colors" data-event="click:toggleFAQ" data-faq-id="experience">
+                        <span class="text-lg font-semibold text-white">Do I need prior engineering experience?</span>
+                        <i class="fas fa-chevron-down text-league-cyan transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                        <p>No formal engineering background is required! Many successful builders started as complete beginners. Our community is very welcoming and experienced builders are always willing to help newcomers. We recommend starting with our workshops and joining our Discord for mentorship.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-league-navy rounded-xl border border-gray-700" data-mock="true">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:text-league-cyan transition-colors" data-event="click:toggleFAQ" data-faq-id="safety">
+                        <span class="text-lg font-semibold text-white">How dangerous is combat robotics?</span>
+                        <i class="fas fa-chevron-down text-league-cyan transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                        <p>Safety is our top priority. All competitions are held in reinforced arenas with safety barriers. Strict safety protocols are enforced in pit areas, and all robots undergo thorough safety inspections. While there are inherent risks in building and operating combat robots, following proper safety procedures minimizes danger significantly.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-league-navy rounded-xl border border-gray-700" data-mock="true">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:text-league-cyan transition-colors" data-event="click:toggleFAQ" data-faq-id="age">
+                        <span class="text-lg font-semibold text-white">Are there age restrictions for competitors?</span>
+                        <i class="fas fa-chevron-down text-league-cyan transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                        <p>Competitors under 18 must have adult supervision and parental consent. We encourage young builders and have specific safety protocols for underage participants. Many of our most innovative builders started in high school robotics programs.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-league-navy rounded-xl border border-gray-700" data-mock="true">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:text-league-cyan transition-colors" data-event="click:toggleFAQ" data-faq-id="events">
+                        <span class="text-lg font-semibold text-white">How often do you hold events?</span>
+                        <i class="fas fa-chevron-down text-league-cyan transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                        <p>We typically hold 3-4 major events per year, including our Spring Championship, Summer Showdown, and Fall Tournament. We also organize monthly workshops, building sessions, and smaller meetups throughout the year to keep the community engaged.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item bg-league-navy rounded-xl border border-gray-700" data-mock="true">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:text-league-cyan transition-colors" data-event="click:toggleFAQ" data-faq-id="tools">
+                        <span class="text-lg font-semibold text-white">What tools and workspace do I need?</span>
+                        <i class="fas fa-chevron-down text-league-cyan transform transition-transform duration-200"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0 text-gray-300">
+                        <p>Basic hand tools and a small workspace are sufficient for smaller weight classes. Many builders work in garages or basement workshops. For larger robots, access to machining equipment becomes more important, but many makerspaces and community workshops provide shared access to professional tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: FAQSection -->
+
+    <!-- Discord Section -->
+    <!-- @COMPONENT: DiscordSection [community information and invitation] -->
+    <section id="discord" class="py-20 bg-league-navy">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
+                    Join Our Discord Community
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Connect with builders, get help with your projects, and stay updated on all league activities
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Discord Features -->
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="bg-indigo-500 p-3 rounded-lg mr-4 flex-shrink-0">
+                            <i class="fas fa-comments text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Real-time Discussions</h3>
+                            <p class="text-gray-300">Get instant help with build questions, troubleshooting, and design advice from experienced builders.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-green-500 p-3 rounded-lg mr-4 flex-shrink-0">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Builder Meetups</h3>
+                            <p class="text-gray-300">Coordinate local meetups, workshop sessions, and collaborative build projects with nearby members.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-league-orange p-3 rounded-lg mr-4 flex-shrink-0">
+                            <i class="fas fa-calendar text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Event Updates</h3>
+                            <p class="text-gray-300">Be the first to know about upcoming competitions, registration deadlines, and rule changes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-league-cyan p-3 rounded-lg mr-4 flex-shrink-0">
+                            <i class="fas fa-share-alt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Show Off Your Work</h3>
+                            <p class="text-gray-300">Share photos and videos of your builds, get feedback, and celebrate victories with the community.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Discord Invitation Card -->
+                <div class="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl p-8 text-center">
+                    <div class="mb-6">
+                        <i class="fab fa-discord text-6xl text-white mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2">Combat Robotics League</h3>
+                        <p class="text-indigo-200">Official Discord Server</p>
+                    </div>
+                    
+                    <div class="bg-white/10 rounded-lg p-4 mb-6">
+                        <div class="flex items-center justify-between text-white">
+                            <span class="flex items-center">
+                                <i class="fas fa-circle text-green-400 text-xs mr-2"></i>
+                                <span data-bind="discord.onlineMembers" data-mock="true">247 Online</span>
+                            </span>
+                            <span data-bind="discord.totalMembers" data-mock="true">1,337 Members</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6 text-sm text-indigo-200">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-hashtag mr-2"></i>
+                            <span>15+ specialized channels</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-robot mr-2"></i>
+                            <span>Expert builders ready to help</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-rocket mr-2"></i>
+                            <span>Active community 24/7</span>
+                        </div>
+                    </div>
+                    
+                    <button class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors duration-200 transform hover:scale-105 w-full" data-event="click:joinDiscordServer">
+                        <i class="fab fa-discord mr-2"></i>
+                        Join Discord Server
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Channel Preview -->
+            <div class="mt-16 bg-league-dark rounded-2xl p-8">
+                <h3 class="text-2xl font-heading font-bold text-white mb-8 text-center">Popular Channels</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-league-navy rounded-lg p-4 border border-gray-700">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-hashtag text-gray-500 mr-2"></i>
+                            <span class="font-semibold text-white">general-discussion</span>
+                        </div>
+                        <p class="text-sm text-gray-300">General chat about combat robotics and league updates</p>
+                    </div>
+                    <div class="bg-league-navy rounded-lg p-4 border border-gray-700">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-hashtag text-gray-500 mr-2"></i>
+                            <span class="font-semibold text-white">build-help</span>
+                        </div>
+                        <p class="text-sm text-gray-300">Get technical assistance with your robot projects</p>
+                    </div>
+                    <div class="bg-league-navy rounded-lg p-4 border border-gray-700">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-hashtag text-gray-500 mr-2"></i>
+                            <span class="font-semibold text-white">show-and-tell</span>
+                        </div>
+                        <p class="text-sm text-gray-300">Share photos and videos of your latest creations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: DiscordSection -->
+
+    <!-- Footer -->
+    <!-- @COMPONENT: Footer [contact information and links] -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo and Description -->
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-heading font-bold text-league-cyan mb-4">Combat Robotics League</h3>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        The premier destination for combat robotics enthusiasts. Join our community of builders, competitors, and fans pushing the boundaries of engineering and innovation.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-league-cyan transition-colors" data-event="click:openSocial" data-platform="youtube">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-league-cyan transition-colors" data-event="click:openSocial" data-platform="discord">
+                            <i class="fab fa-discord text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-league-cyan transition-colors" data-event="click:openSocial" data-platform="instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-league-cyan transition-colors" data-event="click:openSocial" data-platform="twitter">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#events" class="text-gray-400 hover:text-league-cyan transition-colors">Events</a></li>
+                        <li><a href="#rules" class="text-gray-400 hover:text-league-cyan transition-colors">Rules</a></li>
+                        <li><a href="#getting-started" class="text-gray-400 hover:text-league-cyan transition-colors">Get Started</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-league-cyan transition-colors">FAQ</a></li>
+                        <li><a href="#discord" class="text-gray-400 hover:text-league-cyan transition-colors">Discord</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li data-mock="true">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@combatroboticsleague.com
+                        </li>
+                        <li data-mock="true">
+                            <i class="fas fa-phone mr-2"></i>
+                            (555) 123-4567
+                        </li>
+                        <li data-mock="true">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Tech Hub Arena, Innovation District
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm" data-mock="true">
+                    © 2024 Combat Robotics League. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-league-cyan text-sm transition-colors" data-event="click:viewPrivacy">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-league-cyan text-sm transition-colors" data-event="click:viewTerms">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-league-cyan text-sm transition-colors" data-event="click:viewSafety">Safety Guidelines</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // TODO: Implement business logic, API calls, or state management
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 64; // Account for fixed header
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                        // Close mobile menu if open
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+            
+            // FAQ toggle functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+                
+                if (question && answer && icon) {
+                    question.addEventListener('click', function() {
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                const otherAnswer = otherItem.querySelector('.faq-answer');
+                                const otherIcon = otherItem.querySelector('.faq-question i');
+                                if (otherAnswer && otherIcon) {
+                                    otherAnswer.classList.add('hidden');
+                                    otherIcon.style.transform = 'rotate(0deg)';
+                                }
+                            }
+                        });
+                        
+                        // Toggle current item
+                        if (isOpen) {
+                            answer.classList.add('hidden');
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            answer.classList.remove('hidden');
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+                }
+            });
+            
+            // Active navigation highlighting
+            const sections = document.querySelectorAll('section[id]');
+            const navItems = document.querySelectorAll('.nav-link');
+            
+            function updateActiveNav() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navItems.forEach(item => {
+                    item.classList.remove('text-white');
+                    item.classList.add('text-league-slate');
+                    if (item.getAttribute('href') === `#${current}`) {
+                        item.classList.add('text-white');
+                        item.classList.remove('text-league-slate');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNav);
+            updateActiveNav(); // Initial call
+            
+            // Placeholder event handlers for buttons
+            const buttons = document.querySelectorAll('[data-event]');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const event = this.getAttribute('data-event');
+                    console.log(`Event triggered: ${event}`);
+                    // TODO: Implement actual event handling
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

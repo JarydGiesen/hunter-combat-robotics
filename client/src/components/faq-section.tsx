@@ -20,12 +20,12 @@ const FAQSection = () => {
     {
       question: "What's the typical cost to build a robot?",
       answer:
-        "Costs can vary significantly depending on bot and complexity. Getting a reasonably competitive antweight ready to fight will set you back $200-$300 AUD with about half of that being equipment you would use across multiple bots (transmitter, battery charger, etc.). Many internal parts are reusable in future bots and running costs for competing in an event are low. This is a destructive sport, but you need replacement parts far less often than you may think.",
+        "Costs can vary significantly depending on bot and complexity. Getting a fairly competitive antweight ready to fight will set you back $200-$300 AUD with about half of that being equipment you would use across multiple bots (transmitter, battery charger, etc.). It can be done for cheaper, but many internal parts are reusable in future bots and running costs for competing in an event are low. This is a destructive sport, but you need replacement parts far less often than you may think.",
     },
     {
       question: "How often do competitions happen?",
       answer:
-        "We try to host three to four tournaments a year. Craving more? We run our ruleset exztremely close to Robot Royale (ideally identical) which also runs three to four times a year in Sydney. A bot built to our ruleset is likely be able to compete in Robot Royale. You will also find a wealth of events across Australia.",
+        "We try to host three to four tournaments a year. Craving more? We run our ruleset extremely close to Robot Royale (ideally identical) which also runs three to four times a year in Sydney. A bot built to our ruleset is likely be able to compete in Robot Royale. You will also find a wealth of events across Australia all year round.",
     },
   ];
 

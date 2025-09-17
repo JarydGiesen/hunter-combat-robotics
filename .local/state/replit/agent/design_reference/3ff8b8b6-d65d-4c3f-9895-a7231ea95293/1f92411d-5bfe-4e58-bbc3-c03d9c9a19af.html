@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter Combat Robotics League</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'dark-blue': '#0D172B',
+                    'light-text': '#F2F2F2',
+                    'accent-orange': '#E67E22',
+                    'accent-purple': '#8E44AD',
+                    'accent-cyan': '#00CED1',
+                    'dark-gray': '#1A2332',
+                    'medium-gray': '#2C3E50'
+                },
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif']
+                }
+            }
+        }
+    };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark-blue text-light-text font-inter">
+    <!-- Navigation -->
+    <!-- @COMPONENT: Navigation [responsive navbar with mobile menu] -->
+    <nav class="fixed w-full top-0 z-50 bg-dark-blue/95 backdrop-blur-sm border-b border-medium-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-accent-orange">
+                        <i class="fas fa-robot mr-2"></i>
+                        HCR League
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-light-text hover:text-accent-cyan transition-colors duration-200 font-medium">Home</a>
+                        <a href="#rules" class="text-light-text hover:text-accent-cyan transition-colors duration-200 font-medium">Rules</a>
+                        <a href="#events" class="text-light-text hover:text-accent-cyan transition-colors duration-200 font-medium">Events</a>
+                        <a href="#getting-started" class="text-light-text hover:text-accent-cyan transition-colors duration-200 font-medium">Get Started</a>
+                        <a href="#faq" class="text-light-text hover:text-accent-cyan transition-colors duration-200 font-medium">FAQ</a>
+                        <a href="#discord" class="text-light-text hover:text-accent-cyan transition-colors duration-200 font-medium">Discord</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="text-light-text hover:text-accent-cyan" data-event="click:toggleMobileMenu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <!-- @STATE: mobileMenuOpen:boolean = false -->
+        <div class="md:hidden hidden bg-dark-gray border-t border-medium-gray" data-bind="mobileMenuOpen">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-light-text hover:text-accent-cyan transition-colors duration-200">Home</a>
+                <a href="#rules" class="block px-3 py-2 text-light-text hover:text-accent-cyan transition-colors duration-200">Rules</a>
+                <a href="#events" class="block px-3 py-2 text-light-text hover:text-accent-cyan transition-colors duration-200">Events</a>
+                <a href="#getting-started" class="block px-3 py-2 text-light-text hover:text-accent-cyan transition-colors duration-200">Get Started</a>
+                <a href="#faq" class="block px-3 py-2 text-light-text hover:text-accent-cyan transition-colors duration-200">FAQ</a>
+                <a href="#discord" class="block px-3 py-2 text-light-text hover:text-accent-cyan transition-colors duration-200">Discord</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- Hero Section with Video -->
+    <!-- @COMPONENT: HeroSection [full-width video background with overlay content] -->
+    <section id="home" class="relative h-screen overflow-hidden">
+        <!-- Background Video -->
+        <div class="absolute inset-0 w-full h-full">
+            <!-- Placeholder for hero video - would implement video element with proper sources -->
+            <!-- A dramatic shot of combat robots clashing in an arena with sparks flying -->
+            <div class="w-full h-full bg-cover bg-center bg-no-repeat relative" style="background-image: url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');">
+                <!-- Video overlay -->
+                <div class="absolute inset-0 bg-dark-blue/70"></div>
+                <!-- @FUNCTIONALITY: Replace with actual video element: <video autoplay muted loop class="w-full h-full object-cover"></video> -->
+            </div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 flex items-center justify-center h-full">
+            <div class="text-center px-4 max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <i class="fas fa-robot text-8xl text-accent-orange mb-6 block"></i>
+                    <h1 class="text-6xl md:text-8xl font-black text-light-text mb-4 tracking-tight">
+                        HUNTER COMBAT<br>
+                        <span class="text-accent-cyan">ROBOTICS</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-light-text/90 font-light max-w-2xl mx-auto leading-relaxed">
+                        Where Engineering Meets Destruction
+                    </p>
+                </div>
+                
+                <div class="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
+                    <button class="w-full sm:w-auto bg-accent-orange hover:bg-accent-orange/90 text-dark-blue font-bold py-4 px-8 transition-all duration-200 transform hover:scale-105" data-event="click:scrollToGettingStarted">
+                        GET STARTED
+                    </button>
+                    <button class="w-full sm:w-auto border-2 border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-blue font-bold py-4 px-8 transition-all duration-200" data-event="click:scrollToEvents">
+                        VIEW EVENTS
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-light-text/60 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- About Section -->
+    <!-- @COMPONENT: AboutSection [description of combat robotics sport] -->
+    <section class="py-20 bg-dark-gray">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black text-light-text mb-6">
+                        WHERE ENGINEERING<br>
+                        <span class="text-accent-purple">MEETS DESTRUCTION</span>
+                    </h2>
+                    <p class="text-lg text-light-text/80 mb-6 leading-relaxed">
+                        Combat robotics is the ultimate test of engineering prowess, creativity, and tactical thinking. 
+                        Our league brings together builders, engineers, and competitors to create fighting machines 
+                        that battle in controlled arenas.
+                    </p>
+                    <p class="text-lg text-light-text/80 mb-8 leading-relaxed">
+                        From lightweight spinning discs to heavyweight crushers, every robot tells a story of 
+                        innovation, determination, and the relentless pursuit of mechanical perfection.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-6 text-center">
+                        <div class="border border-accent-orange/30 p-4">
+                            <div class="text-3xl font-black text-accent-orange mb-2" data-bind="stats.totalRobots">150+</div>
+                            <div class="text-sm text-light-text/70 uppercase tracking-wide">Robots Built</div>
+                        </div>
+                        <div class="border border-accent-cyan/30 p-4">
+                            <div class="text-3xl font-black text-accent-cyan mb-2" data-bind="stats.totalMatches">500+</div>
+                            <div class="text-sm text-light-text/70 uppercase tracking-wide">Matches Fought</div>
+                        </div>
+                        <div class="border border-accent-purple/30 p-4">
+                            <div class="text-3xl font-black text-accent-purple mb-2" data-bind="stats.totalBuilders">75+</div>
+                            <div class="text-sm text-light-text/70 uppercase tracking-wide">Active Builders</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <!-- A close-up shot of intricate robot machinery with visible gears and electronics -->
+                    <img src="https://pixabay.com/get/gca596df5697a601c2ecbc0ffb43dd183c1256a1cdeee28090f01e5096046629d96bf04946a576d45724e50f80cc294967507f30d2e286d53724924bf8b1da3c4_1280.jpg" alt="Combat robot mechanical components" class="w-full h-auto rounded-lg shadow-2xl" />
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 border-4 border-accent-orange bg-dark-blue flex items-center justify-center">
+                        <i class="fas fa-cog text-3xl text-accent-orange"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- Upcoming Event -->
+    <!-- @COMPONENT: UpcomingEvent [single event showcase] -->
+    <section class="py-20 bg-dark-blue">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-light-text mb-4">
+                    NEXT <span class="text-accent-cyan">BATTLEGROUND</span>
+                </h2>
+                <p class="text-xl text-light-text/80">Don't miss the action</p>
+            </div>
+            
+            <div class="bg-dark-gray border border-medium-gray p-8 lg:p-12 relative overflow-hidden">
+                <!-- Decorative elements -->
+                <div class="absolute top-0 right-0 w-32 h-32 border-t-4 border-r-4 border-accent-orange"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 border-b-4 border-l-4 border-accent-purple"></div>
+                
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-accent-orange text-dark-blue px-3 py-1 text-sm font-bold uppercase tracking-wide mr-4">
+                                Next Event
+                            </span>
+                            <span class="text-accent-cyan font-medium" data-bind="event.date">March 15, 2024</span>
+                        </div>
+                        
+                        <h3 class="text-3xl md:text-4xl font-black text-light-text mb-4" data-bind="event.title">
+                            SPRING CLASH 2024
+                        </h3>
+                        
+                        <p class="text-lg text-light-text/80 mb-6" data-bind="event.description">
+                            Our biggest tournament of the year featuring 64 robots across 4 weight classes. 
+                            Single elimination bracket with live streaming and expert commentary.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                            <div class="text-center">
+                                <div class="text-2xl font-black text-accent-cyan" data-bind="event.location">NYC</div>
+                                <div class="text-sm text-light-text/70 uppercase">Location</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-black text-accent-orange" data-bind="event.robots">64</div>
+                                <div class="text-sm text-light-text/70 uppercase">Robots</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-black text-accent-purple" data-bind="event.classes">4</div>
+                                <div class="text-sm text-light-text/70 uppercase">Classes</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-black text-accent-cyan" data-bind="event.prize">$5K</div>
+                                <div class="text-sm text-light-text/70 uppercase">Prize Pool</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-accent-orange hover:bg-accent-orange/90 text-dark-blue font-bold py-3 px-6 transition-colors duration-200" data-event="click:registerForEvent">
+                                REGISTER NOW
+                            </button>
+                            <button class="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-blue font-bold py-3 px-6 transition-all duration-200" data-event="click:viewEventDetails">
+                                VIEW DETAILS
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-1">
+                        <!-- A packed arena with spectators watching robot combat -->
+                        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Arena packed with spectators during robot competition" class="w-full h-64 object-cover rounded-lg shadow-xl" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: UpcomingEvent -->
+
+    <!-- Getting Started -->
+    <!-- @COMPONENT: GettingStarted [guide for new builders] -->
+    <section id="getting-started" class="py-20 bg-dark-gray">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-light-text mb-4">
+                    BUILD YOUR <span class="text-accent-orange">WARRIOR</span>
+                </h2>
+                <p class="text-xl text-light-text/80 max-w-3xl mx-auto">
+                    From concept to combat-ready. Follow our proven path to bring your robot vision to life.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="relative group">
+                    <div class="bg-dark-blue border border-accent-purple/30 p-6 h-full hover:border-accent-purple transition-colors duration-200">
+                        <div class="absolute -top-4 -left-4 w-8 h-8 bg-accent-purple text-dark-blue flex items-center justify-center font-black">
+                            01
+                        </div>
+                        <i class="fas fa-lightbulb text-4xl text-accent-purple mb-4"></i>
+                        <h3 class="text-xl font-bold text-light-text mb-3">Design & Plan</h3>
+                        <p class="text-light-text/70 text-sm leading-relaxed">
+                            Start with our design templates and weapon guides. Learn weight classes, rules, and basic engineering principles.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative group">
+                    <div class="bg-dark-blue border border-accent-cyan/30 p-6 h-full hover:border-accent-cyan transition-colors duration-200">
+                        <div class="absolute -top-4 -left-4 w-8 h-8 bg-accent-cyan text-dark-blue flex items-center justify-center font-black">
+                            02
+                        </div>
+                        <i class="fas fa-tools text-4xl text-accent-cyan mb-4"></i>
+                        <h3 class="text-xl font-bold text-light-text mb-3">Build & Test</h3>
+                        <p class="text-light-text/70 text-sm leading-relaxed">
+                            Access our partner workshops and fabrication guides. Get mentorship from experienced builders in the community.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative group">
+                    <div class="bg-dark-blue border border-accent-orange/30 p-6 h-full hover:border-accent-orange transition-colors duration-200">
+                        <div class="absolute -top-4 -left-4 w-8 h-8 bg-accent-orange text-dark-blue flex items-center justify-center font-black">
+                            03
+                        </div>
+                        <i class="fas fa-shield-alt text-4xl text-accent-orange mb-4"></i>
+                        <h3 class="text-xl font-bold text-light-text mb-3">Safety Check</h3>
+                        <p class="text-light-text/70 text-sm leading-relaxed">
+                            Complete safety inspection with certified officials. Ensure your robot meets all competition requirements.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative group">
+                    <div class="bg-dark-blue border border-accent-purple/30 p-6 h-full hover:border-accent-purple transition-colors duration-200">
+                        <div class="absolute -top-4 -left-4 w-8 h-8 bg-accent-purple text-dark-blue flex items-center justify-center font-black">
+                            04
+                        </div>
+                        <i class="fas fa-trophy text-4xl text-accent-purple mb-4"></i>
+                        <h3 class="text-xl font-bold text-light-text mb-3">Enter Combat</h3>
+                        <p class="text-light-text/70 text-sm leading-relaxed">
+                            Register for events and face off against other builders. Learn, iterate, and become a combat robotics champion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-accent-orange hover:bg-accent-orange/90 text-dark-blue font-bold py-4 px-8 transition-colors duration-200" data-event="click:viewFullGuide">
+                    VIEW COMPLETE GUIDE
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: GettingStarted -->
+
+    <!-- Competition Winners -->
+    <!-- @COMPONENT: CompetitionWinners [photo gallery of recent winners] -->
+    <section class="py-20 bg-dark-blue">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-light-text mb-4">
+                    HALL OF <span class="text-accent-cyan">CHAMPIONS</span>
+                </h2>
+                <p class="text-xl text-light-text/80">Celebrating our latest tournament winners</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- @MAP: winners.map(winner => ( -->
+                <div class="group relative overflow-hidden bg-dark-gray border border-medium-gray hover:border-accent-orange transition-colors duration-200">
+                    <!-- Engineering team celebrating with their winning robot -->
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Engineering team celebrating victory with their robot" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-accent-orange text-dark-blue px-2 py-1 text-xs font-bold uppercase tracking-wide" data-bind="winner.weightClass">
+                                Heavyweight
+                            </span>
+                            <span class="text-accent-cyan text-sm font-medium" data-bind="winner.event">
+                                Winter Clash 2024
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-light-text mb-2" data-bind="winner.robotName">DEVASTATOR MK-III</h3>
+                        <p class="text-light-text/70 text-sm mb-3" data-bind="winner.builderName">Built by: Team Chaos</p>
+                        <p class="text-light-text/60 text-xs leading-relaxed" data-bind="winner.description">
+                            Vertical spinner with titanium armor. Dominated the heavyweight division with devastating power.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden bg-dark-gray border border-medium-gray hover:border-accent-purple transition-colors duration-200">
+                    <!-- Winners holding trophy with their combat robot -->
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Winners holding trophy with their combat robot" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-accent-purple text-dark-blue px-2 py-1 text-xs font-bold uppercase tracking-wide" data-bind="winner.weightClass">
+                                Middleweight
+                            </span>
+                            <span class="text-accent-cyan text-sm font-medium" data-bind="winner.event">
+                                Winter Clash 2024
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-light-text mb-2" data-bind="winner.robotName">RAZOR EDGE</h3>
+                        <p class="text-light-text/70 text-sm mb-3" data-bind="winner.builderName">Built by: Sarah Chen</p>
+                        <p class="text-light-text/60 text-xs leading-relaxed" data-bind="winner.description">
+                            Horizontal spinner with exceptional speed and precision. Undefeated in middleweight competition.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden bg-dark-gray border border-medium-gray hover:border-accent-cyan transition-colors duration-200">
+                    <!-- Competition podium with robot builders celebrating -->
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Competition podium with robot builders celebrating" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-accent-cyan text-dark-blue px-2 py-1 text-xs font-bold uppercase tracking-wide" data-bind="winner.weightClass">
+                                Lightweight
+                            </span>
+                            <span class="text-accent-cyan text-sm font-medium" data-bind="winner.event">
+                                Winter Clash 2024
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-light-text mb-2" data-bind="winner.robotName">WHIRLWIND</h3>
+                        <p class="text-light-text/70 text-sm mb-3" data-bind="winner.builderName">Built by: Mike Rodriguez</p>
+                        <p class="text-light-text/60 text-xs leading-relaxed" data-bind="winner.description">
+                            Compact vertical disk with incredible agility. Perfect weight distribution and devastating attacks.
+                        </p>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CompetitionWinners -->
+
+    <!-- FAQ Section -->
+    <!-- @COMPONENT: FAQSection [expandable FAQ items] -->
+    <section id="faq" class="py-20 bg-dark-gray">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-light-text mb-4">
+                    FREQUENTLY ASKED <span class="text-accent-purple">QUESTIONS</span>
+                </h2>
+                <p class="text-xl text-light-text/80">Everything you need to know to get started</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- @MAP: faqs.map((faq, index) => ( -->
+                <div class="border border-medium-gray bg-dark-blue">
+                    <button class="w-full text-left p-6 flex justify-between items-center hover:bg-dark-gray/50 transition-colors duration-200" data-event="click:toggleFAQ" data-faq-index="0">
+                        <span class="text-lg font-semibold text-light-text">What weight classes do you support?</span>
+                        <i class="fas fa-chevron-down text-accent-orange transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6" data-faq-content="0">
+                        <p class="text-light-text/80 leading-relaxed">
+                            We support four main weight classes: Featherweight (30 lbs), Lightweight (60 lbs), 
+                            Middleweight (120 lbs), and Heavyweight (250 lbs). Each class has specific rules 
+                            and safety requirements.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="border border-medium-gray bg-dark-blue">
+                    <button class="w-full text-left p-6 flex justify-between items-center hover:bg-dark-gray/50 transition-colors duration-200" data-event="click:toggleFAQ" data-faq-index="1">
+                        <span class="text-lg font-semibold text-light-text">Do I need prior robotics experience?</span>
+                        <i class="fas fa-chevron-down text-accent-orange transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6" data-faq-content="1">
+                        <p class="text-light-text/80 leading-relaxed">
+                            Not at all! Many of our most successful builders started with zero robotics experience. 
+                            We provide mentorship programs, workshops, and detailed guides to help newcomers learn 
+                            the fundamentals of robot design and construction.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="border border-medium-gray bg-dark-blue">
+                    <button class="w-full text-left p-6 flex justify-between items-center hover:bg-dark-gray/50 transition-colors duration-200" data-event="click:toggleFAQ" data-faq-index="2">
+                        <span class="text-lg font-semibold text-light-text">What's the typical cost to build a robot?</span>
+                        <i class="fas fa-chevron-down text-accent-orange transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6" data-faq-content="2">
+                        <p class="text-light-text/80 leading-relaxed">
+                            Costs vary significantly by weight class and design complexity. Entry-level featherweight 
+                            robots can be built for $500-1000, while competitive heavyweight robots may cost 
+                            $5000-15000. We provide budget-friendly starter kits and used parts marketplace.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="border border-medium-gray bg-dark-blue">
+                    <button class="w-full text-left p-6 flex justify-between items-center hover:bg-dark-gray/50 transition-colors duration-200" data-event="click:toggleFAQ" data-faq-index="3">
+                        <span class="text-lg font-semibold text-light-text">How often do competitions happen?</span>
+                        <i class="fas fa-chevron-down text-accent-orange transition-transform duration-200"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6" data-faq-content="3">
+                        <p class="text-light-text/80 leading-relaxed">
+                            We host major tournaments quarterly, with smaller local events monthly. Practice sessions 
+                            and testing days happen weekly at our facility. Competition schedules are posted 6 months 
+                            in advance to allow adequate preparation time.
+                        </p>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-blue font-bold py-3 px-6 transition-all duration-200" data-event="click:viewFullFAQ">
+                    VIEW ALL QUESTIONS
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: FAQSection -->
+
+    <!-- Discord Community -->
+    <!-- @COMPONENT: DiscordSection [community information and invitation] -->
+    <section id="discord" class="py-20 bg-dark-blue">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-dark-gray border border-medium-gray p-8 lg:p-12 relative overflow-hidden">
+                <!-- Decorative Discord-style elements -->
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent-purple via-accent-cyan to-accent-orange"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <i class="fab fa-discord text-5xl text-accent-purple mr-4"></i>
+                            <div>
+                                <h2 class="text-4xl font-black text-light-text">JOIN OUR</h2>
+                                <h2 class="text-4xl font-black text-accent-purple">DISCORD</h2>
+                            </div>
+                        </div>
+                        
+                        <p class="text-lg text-light-text/80 mb-6 leading-relaxed">
+                            Connect with fellow builders, share designs, get real-time help, and stay updated on 
+                            the latest league news. Our Discord is the beating heart of the HCR community.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="text-center p-4 border border-accent-purple/30">
+                                <div class="text-2xl font-black text-accent-purple mb-1" data-bind="discord.members">1,247</div>
+                                <div class="text-sm text-light-text/70 uppercase tracking-wide">Active Members</div>
+                            </div>
+                            <div class="text-center p-4 border border-accent-cyan/30">
+                                <div class="text-2xl font-black text-accent-cyan mb-1" data-bind="discord.channels">25+</div>
+                                <div class="text-sm text-light-text/70 uppercase tracking-wide">Channels</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center text-light-text/80">
+                                <i class="fas fa-comments text-accent-orange mr-3"></i>
+                                <span>Real-time chat and voice channels</span>
+                            </div>
+                            <div class="flex items-center text-light-text/80">
+                                <i class="fas fa-tools text-accent-cyan mr-3"></i>
+                                <span>Technical help and troubleshooting</span>
+                            </div>
+                            <div class="flex items-center text-light-text/80">
+                                <i class="fas fa-calendar text-accent-purple mr-3"></i>
+                                <span>Event announcements and reminders</span>
+                            </div>
+                            <div class="flex items-center text-light-text/80">
+                                <i class="fas fa-share-alt text-accent-orange mr-3"></i>
+                                <span>Design sharing and feedback</span>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-accent-purple hover:bg-accent-purple/90 text-light-text font-bold py-4 px-8 transition-colors duration-200 flex items-center" data-event="click:joinDiscord">
+                            <i class="fab fa-discord mr-3"></i>
+                            JOIN DISCORD SERVER
+                        </button>
+                    </div>
+                    
+                    <div class="relative">
+                        <!-- A diverse group of engineers collaborating on robot designs -->
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Diverse group of engineers collaborating on robot designs" class="w-full h-auto rounded-lg shadow-2xl" />
+                        <div class="absolute -top-6 -right-6 bg-accent-purple text-light-text p-4 rounded">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: DiscordSection -->
+
+    <!-- Partners & Sponsors -->
+    <!-- @COMPONENT: PartnersSection [sponsor logos and acknowledgments] -->
+    <section class="py-20 bg-dark-gray">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-light-text mb-4">
+                    OUR <span class="text-accent-orange">PARTNERS</span>
+                </h2>
+                <p class="text-xl text-light-text/80">Supporting the future of combat robotics</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <!-- @MAP: partners.map(partner => ( -->
+                <div class="bg-dark-blue border border-medium-gray p-6 text-center hover:border-accent-orange transition-colors duration-200 group">
+                    <div class="text-4xl text-accent-orange mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-light-text mb-2" data-bind="partner.name">TechForge Industries</h3>
+                    <p class="text-sm text-light-text/60" data-bind="partner.contribution">Materials Sponsor</p>
+                </div>
+                
+                <div class="bg-dark-blue border border-medium-gray p-6 text-center hover:border-accent-cyan transition-colors duration-200 group">
+                    <div class="text-4xl text-accent-cyan mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-light-text mb-2" data-bind="partner.name">RoboTech Solutions</h3>
+                    <p class="text-sm text-light-text/60" data-bind="partner.contribution">Electronics Partner</p>
+                </div>
+                
+                <div class="bg-dark-blue border border-medium-gray p-6 text-center hover:border-accent-purple transition-colors duration-200 group">
+                    <div class="text-4xl text-accent-purple mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-light-text mb-2" data-bind="partner.name">MakerSpace NYC</h3>
+                    <p class="text-sm text-light-text/60" data-bind="partner.contribution">Facility Partner</p>
+                </div>
+                
+                <div class="bg-dark-blue border border-medium-gray p-6 text-center hover:border-accent-orange transition-colors duration-200 group">
+                    <div class="text-4xl text-accent-orange mb-3 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-light-text mb-2" data-bind="partner.name">StreamTech Media</h3>
+                    <p class="text-sm text-light-text/60" data-bind="partner.contribution">Broadcasting Partner</p>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-light-text/60 mb-6">Interested in partnering with us?</p>
+                <button class="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-blue font-bold py-3 px-6 transition-all duration-200" data-event="click:contactPartnership">
+                    BECOME A PARTNER
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: PartnersSection -->
+
+    <!-- Footer -->
+    <!-- @COMPONENT: Footer [site links and contact information] -->
+    <footer class="bg-dark-blue border-t border-medium-gray py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-robot text-3xl text-accent-orange mr-3"></i>
+                        <h3 class="text-2xl font-bold text-light-text">Hunter Combat Robotics</h3>
+                    </div>
+                    <p class="text-light-text/70 mb-4 max-w-md">
+                        Building the future of competitive robotics through innovation, 
+                        community, and the relentless pursuit of mechanical excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-accent-orange hover:text-accent-orange/80 transition-colors duration-200">
+                            <i class="fab fa-discord text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-accent-cyan hover:text-accent-cyan/80 transition-colors duration-200">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-accent-purple hover:text-accent-purple/80 transition-colors duration-200">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-light-text mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#rules" class="text-light-text/70 hover:text-accent-cyan transition-colors duration-200">Rules & Regulations</a></li>
+                        <li><a href="#events" class="text-light-text/70 hover:text-accent-cyan transition-colors duration-200">Upcoming Events</a></li>
+                        <li><a href="#getting-started" class="text-light-text/70 hover:text-accent-cyan transition-colors duration-200">Getting Started</a></li>
+                        <li><a href="#faq" class="text-light-text/70 hover:text-accent-cyan transition-colors duration-200">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-light-text mb-4">Contact</h4>
+                    <ul class="space-y-2 text-light-text/70">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-accent-orange mr-2"></i>
+                            <span data-bind="contact.email">info@hcrleague.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-accent-cyan mr-2"></i>
+                            <span data-bind="contact.location">New York, NY</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-discord text-accent-purple mr-2"></i>
+                            <span>Join our Discord</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-medium-gray mt-12 pt-8 text-center">
+                <p class="text-light-text/60">
+                    © 2024 Hunter Combat Robotics League. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // Basic interactivity for mockup demonstration
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('[data-event="click:toggleMobileMenu"]');
+            const mobileMenu = document.querySelector('[data-bind="mobileMenuOpen"]');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // FAQ toggles
+            const faqButtons = document.querySelectorAll('[data-event="click:toggleFAQ"]');
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.getAttribute('data-faq-index');
+                    const content = document.querySelector(`[data-faq-content="${index}"]`);
+                    const icon = this.querySelector('i');
+                    
+                    if (content) {
+                        content.classList.toggle('hidden');
+                        icon.classList.toggle('fa-chevron-down');
+                        icon.classList.toggle('fa-chevron-up');
+                    }
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // TODO: Implement business logic for:
+            // - Event registration system
+            // - Contact forms
+            // - Member authentication
+            // - Discord integration
+            // - Real-time event updates
+            // - Robot submission system
+        })();
+    </script>
+</body>
+</html>

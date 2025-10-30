@@ -58,10 +58,12 @@ const DiscordSection = () => {
                 })}
               </div>
 
-              <Button className="bg-accent-cyan hover:bg-accent-cyan/90 text-light-text font-bold py-4 px-8 flex items-center transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
-                <MessageCircle className="h-5 w-5 mr-3" />
-                JOIN DISCORD SERVER
-              </Button>
+              <a href="https://discord.gg/MD25P6Ht8T" target="_blank" rel="noopener noreferrer">
+                <Button className="bg-accent-cyan hover:bg-accent-cyan/90 text-light-text font-bold py-4 px-8 flex items-center transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+                  <MessageCircle className="h-5 w-5 mr-3" />
+                  JOIN DISCORD SERVER
+                </Button>
+              </a>
             </div>
 
             <div className="relative">

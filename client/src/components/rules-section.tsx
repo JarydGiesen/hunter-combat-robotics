@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { FileText, Download, BookOpen } from "lucide-react";
+import { FileText, ExternalLink, BookOpen } from "lucide-react";
 
 const RulesSection = () => {
   return (
@@ -20,6 +20,7 @@ const RulesSection = () => {
           <div className="bg-[#F2F2F2] border border-medium-gray p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-24 h-24 border-t-4 border-r-4 border-accent-cyan"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 border-b-4 border-l-4 border-accent-cyan"></div>
+
             <div className="relative z-10">
               <div className="flex items-center mb-4">
                 <BookOpen className="h-8 w-8 text-accent-cyan mr-3" />
@@ -31,13 +32,15 @@ const RulesSection = () => {
                 Quick visual guide with essential rules and reminders. Perfect
                 for an introduction or refresher of the rules.
               </p>
-              <Button
-                variant="outline"
-                className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-[#F2F2F2] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center"
-              >
-                <Download className="h-4 w-4 mr-2" />
-                Download Brief Rules
-              </Button>
+              <a href="https://drive.google.com/file/d/1wSkwM5fAie0K1wIato3yefhsA05nexlq/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  className="border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-[#F2F2F2] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View Brief Rules
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -45,6 +48,7 @@ const RulesSection = () => {
           <div className="bg-[#F2F2F2] border border-medium-gray p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-24 h-24 border-t-4 border-r-4 border-accent-purple"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 border-b-4 border-l-4 border-accent-purple"></div>
+
             <div className="relative z-10">
               <div className="flex items-center mb-4">
                 <FileText className="h-8 w-8 text-accent-purple mr-3" />
@@ -56,13 +60,15 @@ const RulesSection = () => {
                 Comprehensive document covering all rules and safety
                 requirements in detail.
               </p>
-              <Button
-                variant="outline"
-                className="border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-[#F2F2F2] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center"
-              >
-                <Download className="h-4 w-4 mr-2" />
-                Download Full Rules
-              </Button>
+              <a href="https://drive.google.com/file/d/1cTyPhdYY85nxMn_IJtnLgNNgTK2oz-Lw/view" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  className="border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-[#F2F2F2] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View Full Rules
+                </Button>
+              </a>
             </div>
           </div>
         </div>

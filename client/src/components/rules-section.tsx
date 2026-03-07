@@ -25,12 +25,11 @@ const RulesSection = () => {
               <div className="flex items-center mb-4">
                 <BookOpen className="h-8 w-8 text-accent-cyan mr-3" />
                 <h3 className="text-2xl font-black text-[#0D172B]">
-                  Brief Ruleset
+                  Visual Ruleset
                 </h3>
               </div>
               <p className="text-[#0D172B]/80 mb-6">
-                Quick visual guide with essential rules and reminders. Perfect
-                for an introduction or refresher of the rules.
+                Quick visual guide with essential rules and reminders. These rules supersede the full ruleset.
               </p>
               <a href="https://drive.google.com/file/d/1wSkwM5fAie0K1wIato3yefhsA05nexlq/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <Button

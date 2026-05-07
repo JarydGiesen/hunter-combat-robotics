@@ -64,12 +64,12 @@ const UpcomingEvent = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://www.robotcombatevents.com/events/7056" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.robotcombatevents.com/events/7782" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                     REGISTER NOW
                   </Button>
                 </a>s
-                <a href="https://www.robotcombatevents.com/events/7056" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.robotcombatevents.com/events/7782" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
                     className="border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-[#F2F2F2] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"

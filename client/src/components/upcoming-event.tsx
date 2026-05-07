@@ -27,7 +27,7 @@ const UpcomingEvent = () => {
               </div>
 
               <h3 className="text-3xl md:text-4xl font-black text-[#0D172B] mb-2">
-                Hunter Combat Robotics: Round 2
+                Hunter Combat Robotics: Round 3
               </h3>
 
               <p className="text-lg text-[#0D172B]/80 mb-6">
@@ -64,7 +64,7 @@ const UpcomingEvent = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://www.robotcombatevents.com/events/6395" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.robotcombatevents.com/events/7056" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                     REGISTER NOW
                   </Button>

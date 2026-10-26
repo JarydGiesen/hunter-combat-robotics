@@ -23,11 +23,11 @@ const UpcomingEvent = () => {
                 <span className="bg-accent-orange text-[#0D172B] px-3 py-1 text-sm font-bold uppercase tracking-wide mr-4">
                   Next Event
                 </span>
-                <span className="text-accent-purple font-bold">August 15th 2026</span>
+                <span className="text-accent-purple font-bold">November 28th 2026</span>
               </div>
 
               <h3 className="text-3xl md:text-4xl font-black text-[#0D172B] mb-2">
-                Hunter Combat Robotics: Round 4
+                Hunter Combat Robotics: Round 5
               </h3>
 
               <p className="text-lg text-[#0D172B]/80 mb-6">
@@ -64,12 +64,12 @@ const UpcomingEvent = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://www.robotcombatevents.com/events/8903" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.robotcombatevents.com/events/10619" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-accent-orange hover:bg-accent-orange/90 text-[#0D172B] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
                     REGISTER NOW
                   </Button>
                 </a>s
-                <a href="https://www.robotcombatevents.com/events/8903" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.robotcombatevents.com/events/10619" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
                     className="border border-accent-purple text-accent-purple hover:bg-accent-purple hover:text-[#F2F2F2] font-bold transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
